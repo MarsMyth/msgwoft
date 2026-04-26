@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "key": {
+    "d": {
+      "item": "minecraft:diamond"
+    },
+    "w": {
+      "item": "minecraft:oak_planks"
+    },
+    "x": {
+      "item": "minecraft:polished_tuff"
+    }
+  },
+  "pattern": [
+    "xxx",
+    "wdw",
+    "www"
+  ],
+  "result": {
+    "count": 1,
+    "id": "msgwoft:identification_station"
+  }
+}

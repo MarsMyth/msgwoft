@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "msgwoft:copper_nugget"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    },
+    "need_ingot": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:copper_ingot"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "need_ingot"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "msgwoft:copper_nugget"
+    ]
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "msgwoft:block/identification_station_down",
+    "east": "msgwoft:block/identification_station_east",
+    "north": "msgwoft:block/identification_station_north",
+    "particle": "msgwoft:block/identification_station_particle",
+    "south": "msgwoft:block/identification_station_south",
+    "up": "msgwoft:block/identification_station_up",
+    "west": "msgwoft:block/identification_station_west"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "fb.explode": {
+    "sounds": [
+      "msgwoft:fb/explode"
+    ]
+  },
+  "fb.land": {
+    "sounds": [
+      "msgwoft:fb/land"
+    ]
+  },
+  "fb.ring1": {
+    "sounds": [
+      "msgwoft:fb/ring1"
+    ]
+  },
+  "fb.ring2": {
+    "sounds": [
+      "msgwoft:fb/ring2"
+    ]
+  }
+}

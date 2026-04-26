@@ -1,0 +1,11 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "msgwoft:item/identified_specimen/specimen_base",
+    "layer1": "msgwoft:item/identified_specimen/design_layered"
+  },
+  "overrides": [
+    { "predicate": { "msgwoft:design": 0.1 }, "model": "msgwoft:item/identified_data_specimen_mixed" },
+    { "predicate": { "msgwoft:design": 0.2 }, "model": "msgwoft:item/identified_data_specimen_thick" }
+  ]
+}

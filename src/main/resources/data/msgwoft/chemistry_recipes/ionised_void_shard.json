@@ -1,0 +1,16 @@
+{
+  "output": "msgwoft:ionised_void_shard",
+  "output_count": 2,
+  "ingredients": [
+    { "color": "red",    "item": "minecraft:diamond" },
+    { "color": "blue",  "item": "minecraft:quartz" },
+    { "color": "red",    "item": "minecraft:diamond" },
+    { "color": "green",  "item": "minecraft:emerald_block" },
+    { "color": "purple",  "item": "minecraft:echo_shard" },
+    { "color": "red",    "item": "minecraft:diamond" },
+    { "color": "blue",  "item": "minecraft:quartz" },
+    { "color": "blue",  "item": "minecraft:quartz" },
+    { "color": "green",   "item": "minecraft:emerald_block" },
+    { "color": "red",    "item": "minecraft:diamond" }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "output": "msgwoft:stabilization_device",
+  "output_count": 1,
+  "ingredients": [
+    { "color": "red",    "item": "msgwoft:copper_nugget" },
+    { "color": "blue",    "item": "minecraft:slime_ball" },
+    { "color": "green",    "item": "minecraft:iron_block" },
+    { "color": "purple",    "item": "msgwoft:circuit_board" },
+    { "color": "red",    "item": "msgwoft:copper_nugget" },
+    { "color": "blue",    "item": "minecraft:slime_ball" },
+    { "color": "red",    "item": "msgwoft:copper_nugget" },
+    { "color": "blue",    "item": "minecraft:slime_ball" },
+    { "color": "green",    "item": "minecraft:iron_block" },
+    { "color": "red",    "item": "msgwoft:copper_nugget" },
+    { "color": "red",    "item": "msgwoft:copper_nugget" },
+    { "color": "green",    "item": "minecraft:iron_block" }
+  ]
+}

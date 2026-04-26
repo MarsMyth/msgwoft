@@ -1,0 +1,24 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "a": {
+      "item": "minecraft:amethyst_shard"
+    },
+    "g": {
+      "item": "minecraft:gold_ingot"
+    },
+    "s": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " g ",
+    "gag",
+    "sg "
+  ],
+  "result": {
+    "count": 1,
+    "id": "msgwoft:rock_scanner"
+  }
+}

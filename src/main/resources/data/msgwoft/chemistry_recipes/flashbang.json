@@ -1,0 +1,15 @@
+{
+  "output": "msgwoft:flashbang",
+  "output_count": 1,
+  "ingredients": [
+    { "color": "red",    "item": "minecraft:iron_ingot" },
+    { "color": "green",    "item": "minecraft:tnt" },
+    { "color": "blue",    "item": "minecraft:gunpowder" },
+    { "color": "blue",    "item": "minecraft:gunpowder" },
+    { "color": "blue",    "item": "minecraft:gunpowder" },
+    { "color": "green",    "item": "minecraft:tnt" },
+    { "color": "blue",    "item": "minecraft:gunpowder" },
+    { "color": "blue",    "item": "minecraft:gunpowder" },
+    { "color": "blue",    "item": "minecraft:gunpowder" }
+  ]
+}

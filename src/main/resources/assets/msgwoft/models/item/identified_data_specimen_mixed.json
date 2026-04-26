@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "msgwoft:item/identified_specimen/specimen_base",
+    "layer1": "msgwoft:item/identified_specimen/design_mixed"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "required": true,
+  "package": "org.mythic_goose.msgwoft.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "CreativeModeInventoryScreenMixin",
+    "CreativeModeTabMixin",
+    "ItemDurabilityMixin",
+    "ItemPickerMenuMixin",
+    "accessor.CreativeModeInventoryScreenAccessor",
+    "accessor.CreativeModeTabAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "overwrites": {
+    "requireAnnotations": true
+  },
+  "client": [
+    "client.FlashOverlayMixin"
+  ]
+}

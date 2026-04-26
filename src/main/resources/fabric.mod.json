@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "msgwoft",
+	"version": "${version}",
+	"name": "Maybe Something Good Will Occur From This",
+	"description": "IDK what this mod description should be maybe something good",
+	"authors": [
+		"Mars Myth"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/msgwoft/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"org.mythic_goose.msgwoft.MSGWOFT"
+		],
+      "client": [
+        "org.mythic_goose.msgwoft.MSGWOFTClient"
+      ],
+		"fabric-datagen": [
+			"org.mythic_goose.msgwoft.MSGWOFTDataGenerator"
+		]
+	},
+	"mixins": [
+		"msgwoft.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.6",
+		"minecraft": "~1.21.1",
+		"java": ">=21",
+		"fabric-api": "*"
+	},
+    "accessWidener": "msgwoft.accesswidener"
+}

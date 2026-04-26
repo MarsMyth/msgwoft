@@ -1,0 +1,15 @@
+{
+  "output": "msgwoft:luck_upgrade",
+  "output_count": 1,
+  "ingredients": [
+    { "color": "red",    "item": "minecraft:diamond" },
+    { "color": "green",    "item": "minecraft:emerald_block" },
+    { "color": "red",    "item": "minecraft:diamond" },
+    { "color": "green",    "item": "minecraft:emerald_block" },
+    { "color": "red",    "item": "minecraft:diamond" },
+    { "color": "blue",    "item": "minecraft:rabbit_foot" },
+    { "color": "red",    "item": "minecraft:diamond" },
+    { "color": "blue",    "item": "minecraft:rabbit_foot" },
+    { "color": "red",    "item": "minecraft:diamond" }
+  ]
+}

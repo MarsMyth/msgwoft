@@ -1,0 +1,15 @@
+{
+  "output": "msgwoft:efficiency_upgrade",
+  "output_count": 1,
+  "ingredients": [
+    { "color": "blue",    "item": "minecraft:blaze_powder" },
+    { "color": "green",    "item": "minecraft:gold_block" },
+    { "color": "red",    "item": "minecraft:redstone" },
+    { "color": "blue",    "item": "minecraft:blaze_powder" },
+    { "color": "red",    "item": "minecraft:redstone" },
+    { "color": "red",    "item": "minecraft:redstone" },
+    { "color": "green",    "item": "minecraft:gold_block" },
+    { "color": "red",    "item": "minecraft:redstone" },
+    { "color": "red",    "item": "minecraft:redstone" }
+  ]
+}

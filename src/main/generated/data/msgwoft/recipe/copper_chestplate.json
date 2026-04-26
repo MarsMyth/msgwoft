@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "m": {
+      "item": "minecraft:copper_ingot"
+    }
+  },
+  "pattern": [
+    "m m",
+    "mmm",
+    "mmm"
+  ],
+  "result": {
+    "count": 1,
+    "id": "msgwoft:copper_chestplate"
+  }
+}

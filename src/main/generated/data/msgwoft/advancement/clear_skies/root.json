@@ -1,0 +1,33 @@
+{
+  "criteria": {
+    "got_dirt": {
+      "conditions": {
+        "items": [
+          {
+            "items": "msgwoft:rock_scanner"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "background": "minecraft:textures/gui/advancements/backgrounds/adventure.png",
+    "description": {
+      "translate": "advancements.msgwoft.clear_skies.root.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "msgwoft:rock_scanner"
+    },
+    "title": {
+      "translate": "advancements.msgwoft.clear_skies.root.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_dirt"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
