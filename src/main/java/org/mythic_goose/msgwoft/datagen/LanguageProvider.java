@@ -7,6 +7,7 @@ import net.minecraft.core.HolderLookup;
 import net.minecraft.network.chat.Component;
 import org.mythic_goose.msgwoft.init.ModBlocks;
 import org.mythic_goose.msgwoft.init.ModItems;
+import org.mythic_goose.msgwoft.init.ModMobEffects;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -72,14 +73,28 @@ public class LanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModBlocks.DIMENSIONAL_WARPGATE, "Dimensional Rift");
         translationBuilder.add(ModBlocks.OVERWORLD_RETURN_GATE, "Dimensional Rift - (Return Gate)");
 
+        translationBuilder.add("effect.msgwoft.dimensional_desync", "Dimensional Desynchronisation");
+        translationBuilder.add("tooltip.sychronised_orb.use", "Prevents yourself from being dimensionally desynchronised");
+
         // Advancements
 
         translationBuilder.add("advancements.msgwoft.clear_skies.root.title", "MSGWOFT: Clear Skies");
         translationBuilder.add("advancements.msgwoft.clear_skies.root.desc",
-                "You never know this item might be important. Check some ores out");
+                "You never know this item might be important");
 
         translationBuilder.add("advancements.msgwoft.clear_skies.researcher.title", "Data Analysis");
         translationBuilder.add("advancements.msgwoft.clear_skies.researcher.desc",
-                "Gained your first Data Sample - Now Identify it");
+                "Gained your first Data Sample");
+
+        translationBuilder.add("advancements.msgwoft.clear_skies.identification_station.title", "Identification Station Acquired");
+        translationBuilder.add("advancements.msgwoft.clear_skies.identification_station.desc",
+                "Build an Identification Station");
+        translationBuilder.add("advancements.msgwoft.clear_skies.chemistry_station.title", "Chemistry Station Acquired");
+        translationBuilder.add("advancements.msgwoft.clear_skies.chemistry_station.desc",
+                "Build a Chemistry Station");
+
+        translationBuilder.add("advancements.msgwoft.clear_skies.identify.title", "Worth the Wait");
+        translationBuilder.add("advancements.msgwoft.clear_skies.identify.desc",
+                "Got your first Identified Sample");
     }
 }

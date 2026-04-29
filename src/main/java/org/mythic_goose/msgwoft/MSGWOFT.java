@@ -31,6 +31,7 @@ public class MSGWOFT implements ModInitializer {
         ModBlockEntities.register();
         ModMenuTypes.init();
         ModShaders.register();
+        ModMobEffects.registerEffects();
 
         ServerLifecycleEvents.SERVER_STARTED.register(ChemistryStationRecipeManager::loadRecipes);
 	}

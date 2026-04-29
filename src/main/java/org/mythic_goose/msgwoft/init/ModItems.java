@@ -2,16 +2,14 @@ package org.mythic_goose.msgwoft.init;
 
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
-import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.*;
 import org.mythic_goose.msgwoft.MSGWOFT;
 import org.mythic_goose.msgwoft.item.*;
 import org.mythic_goose.msgwoft.item.beta.StabilizationDeviceItem;
+import org.mythic_goose.msgwoft.item.SynchronisedOrbItem;
 import org.mythic_goose.msgwoft.item.materials.ModArmorMaterials;
 import org.mythic_goose.msgwoft.item.materials.ModTiers;
-
-import java.util.List;
 
 public class ModItems {
     public static Item LUCK_MODULE;
@@ -47,12 +45,7 @@ public class ModItems {
         LUCK_MODULE = createItem("luck_upgrade", new ModuleItem(new Item.Properties().stacksTo(10), "Luck"));
         EFFICIENCY_MODULE = createItem("efficiency_upgrade", new ModuleItem(new Item.Properties().stacksTo(10), "Efficiency"));
 
-        SYNCHRONISED_ORB = createItem("synchronised_orb", new Item(new Item.Properties()) {
-            @Override
-            public void appendHoverText(ItemStack itemStack, TooltipContext tooltipContext, List<Component> list, TooltipFlag tooltipFlag) {
-                list.add(Component.translatable("tooltip.no_recipe"));
-            }
-        });
+        SYNCHRONISED_ORB = createItem("synchronised_orb", new SynchronisedOrbItem(new Item.Properties()));
         STABILIZATION_DEVICE = createItem("stabilization_device", new StabilizationDeviceItem(new Item.Properties().stacksTo(1)));
 
         VOID_SHARD = createItem("ionised_void_shard", new IonisedVoidShardItem(new Item.Properties()));
@@ -65,12 +58,7 @@ public class ModItems {
 
         WRITTEN_RECIPE = createItem("written_recipe", new WrittenRecipeItem(new Item.Properties().stacksTo(1)));
 
-        CIRCUIT_BOARD = createItem("circuit_board", new Item(new Item.Properties()) {
-            @Override
-            public void appendHoverText(ItemStack itemStack, TooltipContext tooltipContext, List<Component> list, TooltipFlag tooltipFlag) {
-                list.add(Component.translatable("tooltip.no_recipe"));
-            }
-        });
+        CIRCUIT_BOARD = createItem("circuit_board", new Item(new Item.Properties()));
 
 
         // Copper Age Backport

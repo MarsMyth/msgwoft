@@ -1,0 +1,12 @@
+{
+  "output": "msgwoft:circuit_board",
+  "output_count": 1,
+  "ingredients": [
+    { "color": "red",    "item": "minecraft:gold_nugget" },
+    { "color": "green",    "item": "minecraft:warped_stem" },
+    { "color": "red",    "item": "minecraft:gold_nugget" },
+    { "color": "green",    "item": "minecraft:warped_stem" },
+    { "color": "red",    "item": "minecraft:gold_nugget" },
+    { "color": "green",    "item": "minecraft:warped_stem" }
+  ]
+}

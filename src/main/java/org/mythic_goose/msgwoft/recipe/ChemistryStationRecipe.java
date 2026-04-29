@@ -24,6 +24,11 @@ import java.util.List;
  * Each entry = one bar segment of that color.
  * Max 12 ingredients total. Each color maps to one of the 4 chemical slots.
  * Multiple entries of the same color = multiple items consumed from that slot.
+ *
+ * Red = Minerals (Diamonds, Netherite, Gold, Copper, Emeralds, Iron, Coal)
+ * Green = Blocks
+ * Blue = Miscellaneous items
+ * Purple = Rare+ Miscellaneous items
  */
 public class ChemistryStationRecipe {
 

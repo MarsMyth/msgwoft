@@ -1,5 +1,13 @@
 {
-  "advancements.msgwoft.clear_skies.root.desc": "Maybe Something Good Will Occur From This \n\n You never know this item might be important",
+  "advancements.msgwoft.clear_skies.chemistry_station.desc": "Build a Chemistry Station",
+  "advancements.msgwoft.clear_skies.chemistry_station.title": "Chemistry Station Acquired",
+  "advancements.msgwoft.clear_skies.identification_station.desc": "Build an Identification Station",
+  "advancements.msgwoft.clear_skies.identification_station.title": "Identification Station Acquired",
+  "advancements.msgwoft.clear_skies.identify.desc": "Got your first Identified Sample",
+  "advancements.msgwoft.clear_skies.identify.title": "Worth the Wait",
+  "advancements.msgwoft.clear_skies.researcher.desc": "Gained your first Data Sample",
+  "advancements.msgwoft.clear_skies.researcher.title": "Data Analysis",
+  "advancements.msgwoft.clear_skies.root.desc": "You never know this item might be important",
   "advancements.msgwoft.clear_skies.root.title": "MSGWOFT: Clear Skies",
   "block.msgwoft.chemistry_station": "Chemistry Station",
   "block.msgwoft.dimensional_warpgate": "Dimensional Rift",
@@ -7,6 +15,7 @@
   "block.msgwoft.overworld_return_gate": "Dimensional Rift - (Return Gate)",
   "container.msgwoft.chemistry_station": "Chemistry Station",
   "container.msgwoft.identification_station": "Identification Station",
+  "effect.msgwoft.dimensional_desync": "Dimensional Desynchronisation",
   "item.msgwoft.circuit_board": "Circuit Board",
   "item.msgwoft.copper_axe": "Copper Axe",
   "item.msgwoft.copper_boots": "Copper Boots",
@@ -39,5 +48,6 @@
   "tooltip.module.when_in_chemistry": "§9When in Chemistry Station",
   "tooltip.module.when_in_identity": "§9When in Identification Station",
   "tooltip.no_recipe": "§d§o[Missing Recipe]",
-  "tooltip.preventing_durability": "§6This shard is preventing durability drain"
+  "tooltip.preventing_durability": "§6This shard is preventing durability drain",
+  "tooltip.sychronised_orb.use": "Prevents yourself from being dimensionally desynchronised"
 }

@@ -1,0 +1,33 @@
+{
+  "parent": "msgwoft:clear_skies/specimen",
+  "criteria": {
+    "got_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "msgwoft:identified_data_specimen"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.msgwoft.clear_skies.identify.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "msgwoft:identified_data_specimen"
+    },
+    "title": {
+      "translate": "advancements.msgwoft.clear_skies.identify.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
