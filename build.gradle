@@ -11,6 +11,13 @@ repositories {
         name = 'BlameJared Maven (CrT / Bookshelf)'
         url = 'https://maven.blamejared.com'
     }
+	maven {
+		name = 'GeckoLib'
+		url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/'
+		content {
+			includeGroup("software.bernie.geckolib")
+		}
+	}
 }
 
 fabricApi {
@@ -41,6 +48,9 @@ dependencies {
         exclude group: "maven.modrinth"
         exclude group: "me.fallenbreath"
     }
+
+	modImplementation "software.bernie.geckolib:geckolib-fabric-${minecraft_version}:${geckolib_version}"
+	include("software.bernie.geckolib:geckolib-fabric-${minecraft_version}:${geckolib_version}")
 }
 
 processResources {

@@ -19,6 +19,9 @@ public class IdentificationStationMenu extends AbstractContainerMenu {
     private final IdentificationStationBlockEntity blockEntity;
     private final ContainerData propertyDelegate;
 
+    public int getProgress()    { return propertyDelegate.get(0); }
+    public int getMaxProgress() { return propertyDelegate.get(1); }
+
     // Client-side
     public IdentificationStationMenu(int syncId, Inventory inventory, BlockPos pos) {
         this(syncId, inventory, getBlockEntity(inventory, pos), new SimpleContainerData(2));

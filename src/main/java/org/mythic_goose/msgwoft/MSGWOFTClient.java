@@ -20,6 +20,7 @@ import org.mythic_goose.msgwoft.block.entity.renderer.DimensionalWarpgateBlockEn
 import org.mythic_goose.msgwoft.block.entity.renderer.OverworldReturnGateBlockEntityRenderer;
 import org.mythic_goose.msgwoft.client.FlashbangClientHandler;
 import org.mythic_goose.msgwoft.client.TemporaryLightManager;
+import org.mythic_goose.msgwoft.client.renderer.RavenRenderer;
 import org.mythic_goose.msgwoft.client.tooltip.RecipeTooltipComponent;
 import org.mythic_goose.msgwoft.client.tooltip.RecipeTooltipData;
 import org.mythic_goose.msgwoft.init.*;
@@ -67,6 +68,9 @@ public class MSGWOFTClient implements ClientModInitializer {
         FlashbangClientHandler.register();
         FlashbangPacketHandler.register();
         EntityRendererRegistry.register(ModEntities.FLASHBANG, ThrownItemRenderer::new);
+
+        // Raven
+        EntityRendererRegistry.register(ModEntities.RAVEN, RavenRenderer::new);
 
         ClientTickEvents.END_CLIENT_TICK.register(client -> {
             FlashbangClientHandler.tickFlash();

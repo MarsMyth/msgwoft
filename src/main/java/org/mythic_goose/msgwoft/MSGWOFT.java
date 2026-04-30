@@ -3,8 +3,10 @@ package org.mythic_goose.msgwoft;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.server.MinecraftServer;
 import org.mythic_goose.msgwoft.client.render.ModShaders;
+import org.mythic_goose.msgwoft.entity.RavenEntity;
 import org.mythic_goose.msgwoft.init.*;
 import org.mythic_goose.msgwoft.network.ChemistryCraftPacket;
 import org.mythic_goose.msgwoft.network.FlashbangPacket;
@@ -34,6 +36,11 @@ public class MSGWOFT implements ModInitializer {
         ModMobEffects.registerEffects();
 
         ServerLifecycleEvents.SERVER_STARTED.register(ChemistryStationRecipeManager::loadRecipes);
+
+        FabricDefaultAttributeRegistry.register(
+                ModEntities.RAVEN,
+                RavenEntity.createRavenAttributes()
+        );
 	}
 
 }

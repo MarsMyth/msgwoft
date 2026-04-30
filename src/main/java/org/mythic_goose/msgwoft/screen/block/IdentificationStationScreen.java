@@ -40,9 +40,7 @@ public class IdentificationStationScreen extends AbstractContainerScreen<Identif
         int x = (this.width  - this.imageWidth)  / 2;
         int y = (this.height - this.imageHeight) / 2;
 
-        // Draw main background
         graphics.blit(TEXTURE, x, y, 0, 0, this.imageWidth, this.imageHeight, 256, 256);
-
         renderProgressBulb(graphics, x, y);
     }
 
@@ -65,5 +63,34 @@ public class IdentificationStationScreen extends AbstractContainerScreen<Identif
         renderBackground(graphics, mouseX, mouseY, partialTick);
         super.render(graphics, mouseX, mouseY, partialTick);
         renderTooltip(graphics, mouseX, mouseY);
+        renderTimeLabel(graphics);
+    }
+
+    /** Renders "Xm Ys remaining" (or "Ready" when idle) below the bulb. */
+    private void renderTimeLabel(GuiGraphics graphics) {
+        int progress    = menu.getProgress();
+        int maxProgress = menu.getMaxProgress();
+
+        int x = (this.width  - this.imageWidth)  / 2;
+        int y = (this.height - this.imageHeight) / 2 + 30;
+
+        String text;
+        if (!menu.isCrafting()) {
+            text = "Ready";
+        } else {
+            int ticksLeft   = maxProgress - progress;
+            int totalSeconds = ticksLeft / 20;
+            int minutes      = totalSeconds / 60;
+            int seconds      = totalSeconds % 60;
+            text = minutes > 0
+                    ? String.format("%dm %ds", minutes, seconds)
+                    : String.format("%ds", seconds);
+        }
+
+        // Centre the text under the bulb (bulb is at x+83, width 9)
+        int textX = x + 83 + (BULB_W / 2) - (this.font.width(text) / 2);
+        int textY = y + 21 + BULB_H + 3; // 3px gap below bulb
+
+        graphics.drawString(this.font, text, textX, textY, 0x404040, false);
     }
 }
