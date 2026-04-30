@@ -2,12 +2,16 @@ package org.mythic_goose.msgwoft;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
+import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import net.minecraft.server.MinecraftServer;
+import net.minecraft.tags.BiomeTags;
+import net.minecraft.world.entity.MobCategory;
 import org.mythic_goose.msgwoft.client.render.ModShaders;
 import org.mythic_goose.msgwoft.entity.RavenEntity;
 import org.mythic_goose.msgwoft.init.*;
@@ -55,6 +59,8 @@ public class MSGWOFT implements ModInitializer {
         });
 
         ModLootTableModifiers.initialize();
+
+        BiomeModifications.addSpawn(BiomeSelectors.tag(BiomeTags.IS_FOREST), MobCategory.CREATURE, ModEntities.RAVEN, 8, 2, 5);
 	}
 
 }
