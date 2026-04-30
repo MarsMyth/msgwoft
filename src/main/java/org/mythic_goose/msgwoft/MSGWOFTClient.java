@@ -3,6 +3,7 @@ package org.mythic_goose.msgwoft;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.event.lifecycle.v1.ClientTickEvents;
+import net.fabricmc.fabric.api.client.networking.v1.ClientPlayNetworking;
 import net.fabricmc.fabric.api.client.rendering.v1.ColorProviderRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.TooltipComponentCallback;
@@ -20,16 +21,20 @@ import org.mythic_goose.msgwoft.block.entity.renderer.DimensionalWarpgateBlockEn
 import org.mythic_goose.msgwoft.block.entity.renderer.OverworldReturnGateBlockEntityRenderer;
 import org.mythic_goose.msgwoft.client.FlashbangClientHandler;
 import org.mythic_goose.msgwoft.client.TemporaryLightManager;
+import org.mythic_goose.msgwoft.client.render.ModShaders;
 import org.mythic_goose.msgwoft.client.renderer.RavenRenderer;
 import org.mythic_goose.msgwoft.client.tooltip.RecipeTooltipComponent;
 import org.mythic_goose.msgwoft.client.tooltip.RecipeTooltipData;
 import org.mythic_goose.msgwoft.init.*;
 import org.mythic_goose.msgwoft.network.FlashbangPacketHandler;
+import org.mythic_goose.msgwoft.network.SyncRecipesPacket;
+import org.mythic_goose.msgwoft.recipe.ChemistryStationRecipeManager;
 import org.mythic_goose.msgwoft.screen.item.WrittenRecipeScreen;
 
 public class MSGWOFTClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
+        ModShaders.register();
         ModScreens.init();
 
         // Color for item & design
@@ -98,5 +103,11 @@ public class MSGWOFTClient implements ClientModInitializer {
                 ModBlockEntities.OVERWORLD_RETURN_ENTITY,
                 OverworldReturnGateBlockEntityRenderer::new
         );
+
+        ClientPlayNetworking.registerGlobalReceiver(SyncRecipesPacket.TYPE, (pkt, ctx) -> {
+            ctx.client().execute(() -> {
+                ChemistryStationRecipeManager.loadFromPacket(pkt.recipes());
+            });
+        });
     }
 }

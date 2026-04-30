@@ -1,0 +1,33 @@
+{
+  "parent": "msgwoft:clear_skies/specimen",
+  "criteria": {
+    "got_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "msgwoft:written_recipe"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.msgwoft.clear_skies.recipe.desc"
+    },
+    "icon": {
+      "count": 1,
+      "id": "msgwoft:written_recipe"
+    },
+    "title": {
+      "translate": "advancements.msgwoft.clear_skies.recipe.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

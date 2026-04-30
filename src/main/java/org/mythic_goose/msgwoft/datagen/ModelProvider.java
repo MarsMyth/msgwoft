@@ -46,5 +46,7 @@ public class ModelProvider extends FabricModelProvider {
 
         itemModelGenerators.generateFlatItem(ModItems.STABILIZATION_DEVICE, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.CIRCUIT_BOARD, ModelTemplates.FLAT_ITEM);
+
+        itemModelGenerators.generateFlatItem(ModItems.RAVEN_SPAWN_EGG, ModelTemplates.FLAT_ITEM);
     }
 }

@@ -159,4 +159,10 @@ public class ChemistryStationRecipeManager {
         Item item = BuiltInRegistries.ITEM.get(ResourceLocation.parse(recipe.getOutputItemId()));
         return new ItemStack(item, recipe.getOutputCount());
     }
+
+    public static void loadFromPacket(List<ChemistryStationRecipe> recipes) {
+        RECIPES.clear();
+        RECIPES.addAll(recipes);
+        System.out.println("[ChemistryStation] Client received " + RECIPES.size() + " recipe(s).");
+    }
 }

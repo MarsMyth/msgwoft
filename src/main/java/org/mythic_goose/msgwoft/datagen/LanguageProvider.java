@@ -76,6 +76,9 @@ public class LanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("effect.msgwoft.dimensional_desync", "Dimensional Desynchronisation");
         translationBuilder.add("tooltip.sychronised_orb.use", "Prevents yourself from being dimensionally desynchronised");
 
+        translationBuilder.add(ModItems.RAVEN_SPAWN_EGG, "Raven Spawn Egg");
+        translationBuilder.add("entity.msgwoft.raven", "Raven");
+
         // Advancements
 
         translationBuilder.add("advancements.msgwoft.clear_skies.root.title", "MSGWOFT: Clear Skies");
@@ -96,5 +99,9 @@ public class LanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("advancements.msgwoft.clear_skies.identify.title", "Worth the Wait");
         translationBuilder.add("advancements.msgwoft.clear_skies.identify.desc",
                 "Got your first Identified Sample");
+
+        translationBuilder.add("advancements.msgwoft.clear_skies.recipe.title", "Deep Dive");
+        translationBuilder.add("advancements.msgwoft.clear_skies.recipe.desc",
+                "Found a Written Recipe Item");
     }
 }

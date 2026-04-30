@@ -8,6 +8,7 @@
     "ItemDurabilityMixin",
     "ItemPickerMenuMixin",
     "LivingEntityMixin",
+    "PlayerDropMixin",
     "accessor.CreativeModeInventoryScreenAccessor",
     "accessor.CreativeModeTabAccessor"
   ],

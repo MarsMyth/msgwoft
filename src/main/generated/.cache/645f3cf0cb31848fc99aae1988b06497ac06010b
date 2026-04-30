@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-30T05:50:33.1735677	Maybe Something Good Will Occur From This/Model Definitions
+// 1.21.1	2026-04-30T19:34:56.6964966	Maybe Something Good Will Occur From This/Model Definitions
 1208f77e68c4e753a605de4eeb1ea5aa08ce0384 assets\msgwoft\models\item\copper_helmet.json
 5c9a9e1da323d6b91e28fbd944131f504190bf5e assets\msgwoft\models\item\copper_leggings_diamond_trim.json
 403c472be31258358975a5597e739e521b1eac18 assets\msgwoft\models\item\copper_helmet_diamond_trim.json
@@ -17,6 +17,7 @@ f947a81b8e79e824604e08fbdab42af8db022740 assets\msgwoft\models\item\copper_leggi
 bac15670fea372f344181de71afa3fb0425c595f assets\msgwoft\models\item\copper_leggings.json
 92c0edd0f154358c4fd8227b23a853503cb91722 assets\msgwoft\models\item\copper_leggings_amethyst_trim.json
 63681ed5151c6582073e2ab504cbded0c0912f83 assets\msgwoft\models\item\copper_nugget.json
+851b3172b8da948870937128589b811f6bd853d6 assets\msgwoft\models\item\raven_spawn_egg.json
 7d484ff13570859c25daf4df09faa8ee938b8020 assets\msgwoft\models\item\copper_boots_redstone_trim.json
 be9ea107cdf601d6d5856386f97dd90f017abf3b assets\msgwoft\models\item\circuit_board.json
 206a83de41cbb649d0af61492e69a241957db0f8 assets\msgwoft\models\item\copper_chestplate_amethyst_trim.json
@@ -56,8 +57,8 @@ bc1d42735ace012626f052a73745487e5afcf52c assets\msgwoft\models\item\copper_helme
 ba1f6b391ddd0832d3b46f969b16dbaadcaf23f2 assets\msgwoft\models\item\copper_boots.json
 99cbb52eccdd3309c336ef454a3039ff447c89f5 assets\msgwoft\models\item\copper_boots_diamond_trim.json
 05a8c06b8fa32f58a56c71c9d9750caf1dc0c138 assets\msgwoft\models\item\copper_helmet_amethyst_trim.json
-984859494ed1252f739ddb35500c3d23dc26c94c assets\msgwoft\models\item\synchronised_orb.json
 f07449f4a732429d7b1e50937565b5fe4a47da50 assets\msgwoft\models\item\copper_boots_quartz_trim.json
+984859494ed1252f739ddb35500c3d23dc26c94c assets\msgwoft\models\item\synchronised_orb.json
 37676a933ae138863c4d2c00bac0049a5dfeceb3 assets\msgwoft\models\item\ionised_void_shard.json
 8275e467c6c064f765b278fff8337a2482265c78 assets\msgwoft\models\item\copper_helmet_quartz_trim.json
 c0718208dbb0ae4da986bbf122d8c9050ff19083 assets\msgwoft\models\item\rock_scanner.json

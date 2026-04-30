@@ -100,5 +100,21 @@ public class AdvancementGenerator extends FabricAdvancementProvider {
                 // The first string used in criterion is the name referenced by other advancements when they want to have 'requirements'
                 .addCriterion("got_item", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.IDENTIFIED_DATA_SPECIMEN))
                 .save(consumer, "msgwoft:clear_skies/identify");
+
+        AdvancementHolder recipeGainAdvancement = Advancement.Builder.advancement()
+                .parent(researcherAdvancement)
+                .display(
+                        ModItems.WRITTEN_RECIPE, // The display icon
+                        Component.translatable("advancements.msgwoft.clear_skies.recipe.title"), // The title
+                        Component.translatable("advancements.msgwoft.clear_skies.recipe.desc"), // The description
+                        null,
+                        AdvancementType.TASK, // Options: TASK, CHALLENGE, GOAL
+                        true, // Show toast top right
+                        true, // Announce to chat
+                        false // Hidden in the advancement tab
+                )
+                // The first string used in criterion is the name referenced by other advancements when they want to have 'requirements'
+                .addCriterion("got_item", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.WRITTEN_RECIPE))
+                .save(consumer, "msgwoft:clear_skies/recipe_gain");
     }
 }

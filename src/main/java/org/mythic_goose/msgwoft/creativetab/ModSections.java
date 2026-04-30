@@ -26,7 +26,8 @@ public class ModSections {
                                 ModItems.EFFICIENCY_MODULE,
                                 ModItems.VOID_SHARD,
                                 ModItems.FLASHBANG,
-                                ModItems.CIRCUIT_BOARD
+                                ModItems.CIRCUIT_BOARD,
+                                ModItems.RAVEN_SPAWN_EGG
                         )
                 ),
                 new SectionColored(

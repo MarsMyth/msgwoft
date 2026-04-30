@@ -3,6 +3,7 @@ package org.mythic_goose.msgwoft.init;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
+import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.item.*;
 import org.mythic_goose.msgwoft.MSGWOFT;
 import org.mythic_goose.msgwoft.item.*;
@@ -29,6 +30,8 @@ public class ModItems {
     public static Item FLASHBANG;
 
     public static Item CIRCUIT_BOARD;
+
+    public static Item RAVEN_SPAWN_EGG;
 
     public static Item COPPER_HELMET;
     public static Item COPPER_CHESTPLATE;
@@ -60,6 +63,7 @@ public class ModItems {
 
         CIRCUIT_BOARD = createItem("circuit_board", new Item(new Item.Properties()));
 
+        RAVEN_SPAWN_EGG = createItem("raven_spawn_egg", new ColourlessSpawnEggItem(ModEntities.RAVEN, new Item.Properties()));
 
         // Copper Age Backport
 

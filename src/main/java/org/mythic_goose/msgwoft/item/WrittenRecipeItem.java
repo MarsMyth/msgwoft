@@ -18,6 +18,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.CustomData;
 import net.minecraft.world.level.Level;
+import org.jetbrains.annotations.NotNull;
 import org.mythic_goose.msgwoft.client.tooltip.RecipeTooltipData;
 import org.mythic_goose.msgwoft.recipe.ChemistryStationRecipe;
 import org.mythic_goose.msgwoft.recipe.ChemistryStationRecipeManager;
@@ -39,21 +40,28 @@ public class WrittenRecipeItem extends Item {
     // ── Right-click ───────────────────────────────────────────────────────────
 
     @Override
-    public InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
+    public @NotNull InteractionResultHolder<ItemStack> use(Level level, Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
 
         if (!level.isClientSide) {
-            if (!hasNbt(stack, NBT_RECIPE_INDEX)) {
+            ItemStack modified = stack.copy();
+
+            if (!hasNbt(modified, NBT_RECIPE_INDEX)) {
                 List<ChemistryStationRecipe> recipes = ChemistryStationRecipeManager.getAllRecipes();
                 if (!recipes.isEmpty()) {
                     int index = new Random().nextInt(recipes.size());
-                    putInt(stack, NBT_RECIPE_INDEX, index);
+                    putInt(modified, NBT_RECIPE_INDEX, index);
                 }
             }
 
-            putByte(stack, NBT_OPENED, (byte) 1);
+            putByte(modified, NBT_OPENED, (byte) 1);
+            player.setItemInHand(hand, modified);
 
-            final int recipeIndex = getInt(stack, NBT_RECIPE_INDEX);
+            final int recipeIndex = getInt(modified, NBT_RECIPE_INDEX);
+            // Resolve slot index now, before the lambda captures anything
+            final int slotIndex = hand == InteractionHand.MAIN_HAND
+                    ? player.getInventory().selected
+                    : 40;
 
             if (player instanceof ServerPlayer serverPlayer) {
                 serverPlayer.openMenu(new ExtendedScreenHandlerFactory<Integer>() {
@@ -64,7 +72,7 @@ public class WrittenRecipeItem extends Item {
 
                     @Override
                     public AbstractContainerMenu createMenu(int id, Inventory inv, Player p) {
-                        return new WrittenRecipeMenu(id, inv, stack);
+                        return new WrittenRecipeMenu(id, inv, modified, slotIndex);
                     }
 
                     @Override
@@ -73,9 +81,11 @@ public class WrittenRecipeItem extends Item {
                     }
                 });
             }
+
+            return InteractionResultHolder.sidedSuccess(modified, false);
         }
 
-        return InteractionResultHolder.sidedSuccess(stack, level.isClientSide);
+        return InteractionResultHolder.sidedSuccess(stack, true);
     }
 
     // ── Tooltip ───────────────────────────────────────────────────────────────
@@ -91,8 +101,7 @@ public class WrittenRecipeItem extends Item {
             if (opened) {
                 tooltip.add(Component.literal("[Previewing recipe]")
                         .withStyle(ChatFormatting.DARK_GRAY));
-            }
-            else {
+            } else {
                 tooltip.add(Component.literal("Recipe: Unknown")
                         .withStyle(ChatFormatting.DARK_GRAY));
             }
@@ -110,20 +119,12 @@ public class WrittenRecipeItem extends Item {
         }
     }
 
-    /**
-     * Called by Minecraft to inject a custom image component into the tooltip.
-     * Only shown when the item has been opened and Shift is held.
-     */
     @Override
     public Optional<TooltipComponent> getTooltipImage(ItemStack stack) {
-        boolean opened = getByte(stack, NBT_OPENED) == 1;
-        if (!opened) return Optional.empty();
-
+        if (getByte(stack, NBT_OPENED) != 1) return Optional.empty();
         if (!Screen.hasShiftDown()) return Optional.empty();
-
         ChemistryStationRecipe recipe = getRecipe(stack);
         if (recipe == null) return Optional.empty();
-
         return Optional.of(new RecipeTooltipData(recipe));
     }
 
@@ -147,7 +148,7 @@ public class WrittenRecipeItem extends Item {
         return recipes.get(index);
     }
 
-    // ── 1.21.1 CustomData helpers ─────────────────────────────────────────────
+    // ── CustomData helpers ────────────────────────────────────────────────────
 
     private static CompoundTag getOrCreateCustomData(ItemStack stack) {
         CustomData existing = stack.get(DataComponents.CUSTOM_DATA);

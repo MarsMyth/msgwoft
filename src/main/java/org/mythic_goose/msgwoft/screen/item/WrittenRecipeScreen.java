@@ -7,6 +7,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.player.Inventory;
+import net.minecraft.world.inventory.ClickType;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import org.mythic_goose.msgwoft.recipe.ChemistryStationRecipe;
@@ -19,35 +20,31 @@ public class WrittenRecipeScreen extends AbstractContainerScreen<WrittenRecipeMe
     private static final ResourceLocation SCROLL_TEX =
             ResourceLocation.fromNamespaceAndPath("msgwoft", "textures/gui/written_recipe/recipe_gui.png");
 
-    // ── Color slot textures (20×20 each) ─────────────────────────────────────
-    private static final ResourceLocation SLOT_RED =
-            ResourceLocation.fromNamespaceAndPath("msgwoft", "textures/gui/widget/slots/red_slot.png");
-    private static final ResourceLocation SLOT_GREEN =
-            ResourceLocation.fromNamespaceAndPath("msgwoft", "textures/gui/widget/slots/green_slot.png");
-    private static final ResourceLocation SLOT_BLUE =
-            ResourceLocation.fromNamespaceAndPath("msgwoft", "textures/gui/widget/slots/blue_slot.png");
-    private static final ResourceLocation SLOT_PURPLE =
-            ResourceLocation.fromNamespaceAndPath("msgwoft", "textures/gui/widget/slots/purple_slot.png");
+    // ── Color slot textures ───────────────────────────────────────────────────
+    private static final ResourceLocation SLOT_RED    = slotTex("red_slot");
+    private static final ResourceLocation SLOT_GREEN  = slotTex("green_slot");
+    private static final ResourceLocation SLOT_BLUE   = slotTex("blue_slot");
+    private static final ResourceLocation SLOT_PURPLE = slotTex("purple_slot");
 
-    private static final int SLOT_TEX_SIZE = 20;
+    private static final ResourceLocation SLOT_RED_EMPTY    = slotTex("red_slot_empty");
+    private static final ResourceLocation SLOT_GREEN_EMPTY  = slotTex("green_slot_empty");
+    private static final ResourceLocation SLOT_BLUE_EMPTY   = slotTex("blue_slot_empty");
+    private static final ResourceLocation SLOT_PURPLE_EMPTY = slotTex("purple_slot_empty");
 
-    // ── Empty (grayed-out) slot textures ─────────────────────────────────────
-    private static final ResourceLocation SLOT_RED_EMPTY =
-            ResourceLocation.fromNamespaceAndPath("msgwoft", "textures/gui/widget/slots/red_slot_empty.png");
-    private static final ResourceLocation SLOT_GREEN_EMPTY =
-            ResourceLocation.fromNamespaceAndPath("msgwoft", "textures/gui/widget/slots/green_slot_empty.png");
-    private static final ResourceLocation SLOT_BLUE_EMPTY =
-            ResourceLocation.fromNamespaceAndPath("msgwoft", "textures/gui/widget/slots/blue_slot_empty.png");
-    private static final ResourceLocation SLOT_PURPLE_EMPTY =
-            ResourceLocation.fromNamespaceAndPath("msgwoft", "textures/gui/widget/slots/purple_slot_empty.png");
+    private static final ResourceLocation SEG_RED    = segTex("red_chemical");
+    private static final ResourceLocation SEG_GREEN  = segTex("green_chemical");
+    private static final ResourceLocation SEG_BLUE   = segTex("blue_chemical");
+    private static final ResourceLocation SEG_PURPLE = segTex("purple_chemical");
+    private static final ResourceLocation SEG_EMPTY  = segTex("empty_segment");
 
-    private static ResourceLocation slotEmptyTexture(ChemistryStationRecipe.Color color) {
-        return switch (color) {
-            case RED    -> SLOT_RED_EMPTY;
-            case GREEN  -> SLOT_GREEN_EMPTY;
-            case BLUE   -> SLOT_BLUE_EMPTY;
-            case PURPLE -> SLOT_PURPLE_EMPTY;
-        };
+    private static ResourceLocation slotTex(String name) {
+        return ResourceLocation.fromNamespaceAndPath("msgwoft",
+                "textures/gui/widget/slots/" + name + ".png");
+    }
+
+    private static ResourceLocation segTex(String name) {
+        return ResourceLocation.fromNamespaceAndPath("msgwoft",
+                "textures/gui/written_recipe/icons/" + name + ".png");
     }
 
     private static ResourceLocation slotTexture(ChemistryStationRecipe.Color color) {
@@ -59,17 +56,14 @@ public class WrittenRecipeScreen extends AbstractContainerScreen<WrittenRecipeMe
         };
     }
 
-    // ── Color chemical textures (26×6 each, vertical bar bottom-to-top) ────────
-    private static final ResourceLocation SEG_RED =
-            ResourceLocation.fromNamespaceAndPath("msgwoft", "textures/gui/written_recipe/icons/red_chemical.png");
-    private static final ResourceLocation SEG_GREEN =
-            ResourceLocation.fromNamespaceAndPath("msgwoft", "textures/gui/written_recipe/icons/green_chemical.png");
-    private static final ResourceLocation SEG_BLUE =
-            ResourceLocation.fromNamespaceAndPath("msgwoft", "textures/gui/written_recipe/icons/blue_chemical.png");
-    private static final ResourceLocation SEG_PURPLE =
-            ResourceLocation.fromNamespaceAndPath("msgwoft", "textures/gui/written_recipe/icons/purple_chemical.png");
-    private static final ResourceLocation SEG_EMPTY =
-            ResourceLocation.fromNamespaceAndPath("msgwoft", "textures/gui/written_recipe/icons/empty_segment.png");
+    private static ResourceLocation slotEmptyTexture(ChemistryStationRecipe.Color color) {
+        return switch (color) {
+            case RED    -> SLOT_RED_EMPTY;
+            case GREEN  -> SLOT_GREEN_EMPTY;
+            case BLUE   -> SLOT_BLUE_EMPTY;
+            case PURPLE -> SLOT_PURPLE_EMPTY;
+        };
+    }
 
     private static ResourceLocation segmentTexture(ChemistryStationRecipe.Color color) {
         return switch (color) {
@@ -81,19 +75,16 @@ public class WrittenRecipeScreen extends AbstractContainerScreen<WrittenRecipeMe
     }
 
     // ── GUI dimensions ────────────────────────────────────────────────────────
-    private static final int GUI_W = 178;
-    private static final int GUI_H = 220;
-
-    private static final int CONTENT_X = 20;
-    private static final int CONTENT_Y = 30;
-    private static final int CONTENT_W = 136;
-
-    // Segment bar dimensions
+    private static final int GUI_W       = 178;
+    private static final int GUI_H       = 220;
+    private static final int CONTENT_X   = 20;
+    private static final int CONTENT_Y   = 30;
+    private static final int CONTENT_W   = 136;
     private static final int BAR_SEGMENTS = 12;
-    private static final int SEG_W        = 26;
-    private static final int SEG_H        = 6;
-
-    private static final int SLOT_SIZE = 16;
+    private static final int SEG_W       = 26;
+    private static final int SEG_H       = 6;
+    private static final int SLOT_TEX_SIZE = 20;
+    private static final int SLOT_SIZE   = 16;
 
     // ── State ─────────────────────────────────────────────────────────────────
     private ChemistryStationRecipe recipe;
@@ -110,7 +101,26 @@ public class WrittenRecipeScreen extends AbstractContainerScreen<WrittenRecipeMe
     @Override
     protected void init() {
         super.init();
-        recipe = menu.getRecipe();
+        recipe = ((WrittenRecipeMenu) menu).getRecipe();
+    }
+
+    // ── Key handling ──────────────────────────────────────────────────────────
+
+    @Override
+    public boolean keyPressed(int keyCode, int scanCode, int modifiers) {
+        // Intercept Q (drop key) — close screen first, then drop so item isn't voided
+        if (keyCode == 81 && minecraft != null && minecraft.player != null) {
+            int slot = ((WrittenRecipeMenu) menu).getSlotIndex();
+            minecraft.player.closeContainer();
+            if (slot >= 0) {
+                minecraft.gameMode.handleInventoryMouseClick(
+                        minecraft.player.inventoryMenu.containerId,
+                        slot, 0, ClickType.THROW, minecraft.player
+                );
+            }
+            return true;
+        }
+        return super.keyPressed(keyCode, scanCode, modifiers);
     }
 
     // ── Rendering ─────────────────────────────────────────────────────────────
@@ -144,25 +154,10 @@ public class WrittenRecipeScreen extends AbstractContainerScreen<WrittenRecipeMe
     }
 
     // ── Content ───────────────────────────────────────────────────────────────
-    //
-    // Layout (all relative to baseX / baseY):
-    //
-    //   [ bar (left) ]  [ RED slot   ]
-    //                   [ GREEN slot ]
-    //                   [ BLUE slot  ]
-    //                   [ PURPLE slot]
-    //          ▼
-    //       [ output ]
-    //
-    // The bar and the ingredient column sit side-by-side.
-    // The bar is 26×72 (12 × 6 px segments).
-    // Each ingredient slot is 20×20 with the item count rendered as a
-    // standard item decoration (bottom-right corner, just like a stack).
-    // The output slot is centered under the whole section.
 
     private void renderContent(GuiGraphics gfx, int mouseX, int mouseY) {
-        int baseX = leftPos  + CONTENT_X;
-        int baseY = topPos   + CONTENT_Y;
+        int baseX = leftPos + CONTENT_X;
+        int baseY = topPos  + CONTENT_Y;
         int ink   = 0x5a3a1a;
 
         if (recipe == null) {
@@ -174,33 +169,27 @@ public class WrittenRecipeScreen extends AbstractContainerScreen<WrittenRecipeMe
         List<ChemistryStationRecipe.Ingredient> ings = recipe.getIngredients();
         ChemistryStationRecipe.Color[] colors = ChemistryStationRecipe.Color.values();
 
-        int barTotalH = BAR_SEGMENTS * SEG_H; // 72 px
-
-        // ── Vertical color bar — top-left of content ──────────────────────────
-        // Bar + slot column total width: SEG_W(26) + gap(10) + SLOT_TEX_SIZE(20) = 56
+        int barTotalH  = BAR_SEGMENTS * SEG_H;
         int blockW     = SEG_W + 10 + SLOT_TEX_SIZE;
         int barX       = baseX + (CONTENT_W - blockW) / 2;
         int barTopY    = baseY;
         int barBottomY = barTopY + barTotalH;
 
-        gfx.fill(barX - 1, barTopY - 1,
-                barX + SEG_W + 1, barBottomY + 1,
-                0x55000000);
+        // Bar background
+        gfx.fill(barX - 1, barTopY - 1, barX + SEG_W + 1, barBottomY + 1, 0x55000000);
 
+        // Bar segments
         for (int seg = 0; seg < BAR_SEGMENTS; seg++) {
-            // seg 0 = bottom, seg 11 = top
             int segY = barBottomY - (seg + 1) * SEG_H;
             ResourceLocation segTex = seg < ings.size()
-                    ? segmentTexture(ings.get(seg).color())
-                    : SEG_EMPTY;
+                    ? segmentTexture(ings.get(seg).color()) : SEG_EMPTY;
             RenderSystem.setShaderColor(1f, 1f, 1f, 1f);
             gfx.blit(segTex, barX, segY, 0, 0, SEG_W, SEG_H, SEG_W, SEG_H);
         }
 
-        // ── Ingredient slots — stacked to the right of the bar ───────────────
-        // 4 slots, each 20×20, with explicit gap between them.
-        int slotColumnX  = barX + SEG_W + 10;
-        int slotGap      = 24; // explicit spacing — increase for more room
+        // Ingredient slots
+        int slotColumnX = barX + SEG_W + 10;
+        int slotGap     = 24;
 
         for (int i = 0; i < colors.length; i++) {
             ChemistryStationRecipe.Color color = colors[i];
@@ -209,50 +198,38 @@ public class WrittenRecipeScreen extends AbstractContainerScreen<WrittenRecipeMe
 
             int texY  = barTopY + i * slotGap;
             int itemX = slotColumnX + (SLOT_TEX_SIZE - SLOT_SIZE) / 2;
-            int itemY = texY       + (SLOT_TEX_SIZE - SLOT_SIZE) / 2;
+            int itemY = texY        + (SLOT_TEX_SIZE - SLOT_SIZE) / 2;
 
+            RenderSystem.setShaderColor(1f, 1f, 1f, 1f);
             if (count > 0 && itemId != null) {
-                RenderSystem.setShaderColor(1f, 1f, 1f, 1f);
                 gfx.blit(slotTexture(color), slotColumnX, texY, 0, 0,
                         SLOT_TEX_SIZE, SLOT_TEX_SIZE, SLOT_TEX_SIZE, SLOT_TEX_SIZE);
-                RenderSystem.setShaderColor(1f, 1f, 1f, 1f);
-
-                // Use renderItemDecorations to stamp the count in the
-                // bottom-right corner exactly like a normal item stack
                 ItemStack stack = buildStack(itemId, count);
                 gfx.renderItem(stack, itemX, itemY);
                 gfx.renderItemDecorations(font, stack, itemX, itemY);
-
                 if (mouseX >= itemX && mouseX < itemX + SLOT_SIZE
                         && mouseY >= itemY && mouseY < itemY + SLOT_SIZE) {
                     gfx.renderTooltip(font, stack, mouseX, mouseY);
                 }
             } else {
-                RenderSystem.setShaderColor(1f, 1f, 1f, 1f);
                 gfx.blit(slotEmptyTexture(color), slotColumnX, texY, 0, 0,
                         SLOT_TEX_SIZE, SLOT_TEX_SIZE, SLOT_TEX_SIZE, SLOT_TEX_SIZE);
             }
         }
 
-        // ── Down arrow — centered under the bar ───────────────────────────────
+        // Arrow
         int sectionCenterX = barX + SEG_W / 2;
         int arrowY = barBottomY + 5;
         gfx.drawString(font, Component.literal("▼"),
                 sectionCenterX - font.width("▼") / 2, arrowY, ink, false);
 
-        // ── Output item — centered below the arrow ────────────────────────────
+        // Output
         int outY     = arrowY + font.lineHeight + 4;
         int outSlotX = sectionCenterX - SLOT_SIZE / 2;
-
         ItemStack output = buildStack(recipe.getOutputItemId(), recipe.getOutputCount());
 
-        // Golden highlight box
-        gfx.fill(outSlotX - 2, outY - 2,
-                outSlotX + SLOT_SIZE + 2, outY + SLOT_SIZE + 2,
-                0x88c8a800);
-        gfx.fill(outSlotX - 1, outY - 1,
-                outSlotX + SLOT_SIZE + 1, outY + SLOT_SIZE + 1,
-                0x55000000);
+        gfx.fill(outSlotX - 2, outY - 2, outSlotX + SLOT_SIZE + 2, outY + SLOT_SIZE + 2, 0x88c8a800);
+        gfx.fill(outSlotX - 1, outY - 1, outSlotX + SLOT_SIZE + 1, outY + SLOT_SIZE + 1, 0x55000000);
 
         gfx.renderItem(output, outSlotX, outY);
         gfx.renderItemDecorations(font, output, outSlotX, outY);

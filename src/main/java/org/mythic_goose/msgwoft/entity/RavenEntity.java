@@ -48,6 +48,7 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 import org.mythic_goose.msgwoft.entity.goal.RavenDeliverBundleGoal;
 import org.mythic_goose.msgwoft.entity.goal.RavenFollowOwnerGoal;
@@ -235,7 +236,7 @@ public class RavenEntity extends TamableAnimal implements GeoAnimatable {
     // -------------------------------------------------------------------------
 
     @Override
-    public InteractionResult mobInteract(Player player, InteractionHand hand) {
+    public @NotNull InteractionResult mobInteract(Player player, InteractionHand hand) {
         ItemStack stack = player.getItemInHand(hand);
 
         // Give named bundle to raven
@@ -263,7 +264,7 @@ public class RavenEntity extends TamableAnimal implements GeoAnimatable {
         // Toggle sit for tamed owner
         if (this.onGround() && this.isTame() && this.isOwnedBy(player) && stack.isEmpty()) {
             if (!this.level().isClientSide) {
-                this.setOrderedToSit(!this.isOrderedToSit());
+                this.setSitting(!this.entityData.get(SITTING));
             }
             return InteractionResult.sidedSuccess(this.level().isClientSide);
         }
@@ -491,14 +492,17 @@ public class RavenEntity extends TamableAnimal implements GeoAnimatable {
 
     private <E extends GeoAnimatable> PlayState predicate(AnimationState<E> state) {
         AnimationController<?> controller = state.getController();
-        if (!this.onGround()) {
-            controller.setAnimation(RawAnimation.begin()
-                    .thenLoop(Math.abs(this.getDeltaMovement().y) > 0.1f ? "fastFly" : "fly"));
-        } else if (!this.entityData.get(SITTING) && !this.isPassenger()) {
-            controller.setAnimation(RawAnimation.begin().thenLoop("idle"));
-        } else {
+        boolean isSitting = this.entityData.get(SITTING);
+
+        if (isSitting) {
             controller.setAnimation(RawAnimation.begin().thenLoop("sitIdle"));
+        } else if (!this.onGround()) {
+            boolean fastFly = Math.abs(this.getDeltaMovement().y) > 0.1f;
+            controller.setAnimation(RawAnimation.begin().thenLoop(fastFly ? "fastFly" : "fly"));
+        } else {
+            controller.setAnimation(RawAnimation.begin().thenLoop("idle"));
         }
+
         return PlayState.CONTINUE;
     }
 
