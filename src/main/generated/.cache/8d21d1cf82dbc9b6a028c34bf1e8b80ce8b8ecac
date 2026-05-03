@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-03T10:43:32.5360313	Maybe Something Good Will Occur From This/Recipes
+// 1.21.1	2026-05-03T11:10:41.2108498	Maybe Something Good Will Occur From This/Recipes
 69b7e0a01a21dfc12c4d1f6db61a7ee987166f09 data\msgwoft\advancement\recipes\misc\copper_nugget.json
 e0b538e67c73e2c99c2f8b1dc2992e62032de210 data\msgwoft\advancement\recipes\tools\copper_axe.json
 ba4fdf95562d8dc1f33c579bd3306f783b70d53a data\msgwoft\advancement\recipes\tools\copper_hoe.json
@@ -15,6 +15,7 @@ a1b65d47a0013bc5ea2bb309593ebfe3eba0aeb7 data\msgwoft\advancement\recipes\tools\
 73f8a08c9fc60aa11a4387a82828bef3810b67e0 data\msgwoft\recipe\rock_scanner.json
 63ab43a4d0688afb07415f6dbd19a6975f02522e data\msgwoft\recipe\copper_shovel.json
 3699bda51f416449c04b3cb19c8cd62162a6c82e data\msgwoft\recipe\copper_nugget.json
+e1643dc5bdba71f48adeb1475712e49a93871e37 data\msgwoft\recipe\drying_rack.json
 7f75a11a12e662cfefbf1a2052f09ab43a1b117a data\msgwoft\advancement\recipes\combat\copper_chestplate.json
 d85787511f2ae8192141164782cea4677c2e7939 data\msgwoft\advancement\recipes\combat\copper_leggings.json
 8d111189158a56f22543fb7f2950df83975c9207 data\msgwoft\recipe\copper_leggings.json
@@ -27,3 +28,4 @@ a6b767a558ec94a9bf8665384b1ddf54d9346cef data\msgwoft\advancement\recipes\combat
 ebf3913084c9e9ae087effbc9f791418dcda7866 data\msgwoft\advancement\recipes\building_blocks\identification_station.json
 2de7ebaad17719ad0326577f32c78524d98ee026 data\msgwoft\advancement\recipes\combat\copper_helmet.json
 23bc71b403200803bc00e78cfb9c250e94aee075 data\msgwoft\recipe\chemistry_station.json
+4d4c4094d7b851506fa4a408773ccca7f265adc4 data\msgwoft\advancement\recipes\tools\drying_rack.json

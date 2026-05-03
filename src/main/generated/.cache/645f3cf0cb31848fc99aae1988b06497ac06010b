@@ -1,4 +1,4 @@
-// 1.21.1	2026-05-03T10:43:32.5370292	Maybe Something Good Will Occur From This/Model Definitions
+// 1.21.1	2026-05-03T11:10:41.2118479	Maybe Something Good Will Occur From This/Model Definitions
 1208f77e68c4e753a605de4eeb1ea5aa08ce0384 assets\msgwoft\models\item\copper_helmet.json
 5c9a9e1da323d6b91e28fbd944131f504190bf5e assets\msgwoft\models\item\copper_leggings_diamond_trim.json
 403c472be31258358975a5597e739e521b1eac18 assets\msgwoft\models\item\copper_helmet_diamond_trim.json
@@ -44,8 +44,8 @@ e0a7ffdea05c79a7b7aebca4cc9f1bc10bd9b27d assets\msgwoft\models\item\copper_chest
 aeedf9fbfa02270a256b8a2f90f101b1e27c7c30 assets\msgwoft\models\item\copper_hoe.json
 32aa0f888cc9a23992ea53282438d1e8d0f9706d assets\msgwoft\models\item\copper_leggings_emerald_trim.json
 f4bc5f6144d91209852600be1ac5f731b07f02ff assets\msgwoft\models\item\copper_chestplate_lapis_trim.json
-7991f71bc1e6a3a0940f246f4b0459f5b7eb032f assets\msgwoft\models\item\copper_chestplate_emerald_trim.json
 884f97e495852ef4ff0956bbcab76f6448da7eef assets\msgwoft\models\item\copper_boots_iron_trim.json
+7991f71bc1e6a3a0940f246f4b0459f5b7eb032f assets\msgwoft\models\item\copper_chestplate_emerald_trim.json
 578f74f906c075fbac383ffe76e8f5bbd914e0a7 assets\msgwoft\models\item\copper_shovel.json
 2577c7af2ba6fbcd79c1a407f74a48ba1a31b09f assets\msgwoft\models\item\copper_leggings_gold_trim.json
 f22290be595c96039caa01656b4dcd873209c91c assets\msgwoft\models\item\copper_leggings_redstone_trim.json

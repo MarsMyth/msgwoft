@@ -54,6 +54,12 @@ public class RecipeGenerator extends FabricRecipeProvider {
                 .unlockedBy("get_amethyst", has(Items.AMETHYST_SHARD))
                 .save(recipeOutput);
 
+        ShapedRecipeBuilder.shaped(RecipeCategory.TOOLS, ModBlocks.DRYING_RACK)
+                .pattern("mmm")
+                .define('m', Blocks.OAK_SLAB.asItem())
+                .unlockedBy("get_material", has(Blocks.OAK_SLAB.asItem()))
+                .save(recipeOutput);
+
         generateToolRecipes(ModItems.COPPER_SWORD, ModItems.COPPER_AXE, ModItems.COPPER_PICKAXE, ModItems.COPPER_SHOVEL, ModItems.COPPER_HOE,
                 1, Items.COPPER_INGOT, recipeOutput);
 

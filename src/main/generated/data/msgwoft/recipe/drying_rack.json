@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "m": {
+      "item": "minecraft:oak_slab"
+    }
+  },
+  "pattern": [
+    "mmm"
+  ],
+  "result": {
+    "count": 1,
+    "id": "msgwoft:drying_rack"
+  }
+}
