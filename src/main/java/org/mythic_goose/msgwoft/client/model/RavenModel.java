@@ -16,6 +16,7 @@ public class RavenModel extends GeoModel<RavenEntity> {
     public ResourceLocation getTextureResource(RavenEntity entity) {
         return switch (entity.getRavenType()) {
             case ALBINO  -> ResourceLocation.fromNamespaceAndPath(MSGWOFT.MOD_ID, "textures/entity/raven/raven_albino.png");
+            case SPAMPTOM  -> ResourceLocation.fromNamespaceAndPath(MSGWOFT.MOD_ID, "textures/entity/raven/raven_spamptom.png");
             case SEA_GREEN -> ResourceLocation.fromNamespaceAndPath(MSGWOFT.MOD_ID, "textures/entity/raven/raven_sea_green.png");
             case THREE_EYED -> ResourceLocation.fromNamespaceAndPath(MSGWOFT.MOD_ID, "textures/entity/raven/raven_three_eyed.png");
             default      -> ResourceLocation.fromNamespaceAndPath(MSGWOFT.MOD_ID, "textures/entity/raven/raven_dark.png");

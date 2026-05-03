@@ -12,6 +12,10 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRe
 import net.minecraft.server.MinecraftServer;
 import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.entity.MobCategory;
+import net.minecraft.world.entity.SpawnPlacementTypes;
+import net.minecraft.world.entity.SpawnPlacements;
+import net.minecraft.world.entity.animal.Animal;
+import net.minecraft.world.level.levelgen.Heightmap;
 import org.mythic_goose.msgwoft.client.render.ModShaders;
 import org.mythic_goose.msgwoft.entity.RavenEntity;
 import org.mythic_goose.msgwoft.init.*;
@@ -20,6 +24,8 @@ import org.mythic_goose.msgwoft.network.FlashbangPacket;
 import org.mythic_goose.msgwoft.network.SyncRecipesPacket;
 import org.mythic_goose.msgwoft.recipe.ChemistryStationRecipeManager;
 import org.mythic_goose.msgwoft.util.ModLootTableModifiers;
+import org.mythic_goose.msgwoft.world.gen.ModEntitySpawns;
+import org.mythic_goose.msgwoft.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -60,7 +66,7 @@ public class MSGWOFT implements ModInitializer {
 
         ModLootTableModifiers.initialize();
 
-        BiomeModifications.addSpawn(BiomeSelectors.tag(BiomeTags.IS_FOREST), MobCategory.CREATURE, ModEntities.RAVEN, 8, 2, 5);
+        ModWorldGeneration.generateWorldGen();
 	}
 
 }

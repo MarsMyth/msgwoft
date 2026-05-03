@@ -3,7 +3,7 @@ package org.mythic_goose.msgwoft.init;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.*;
 import org.mythic_goose.msgwoft.MSGWOFT;
 import org.mythic_goose.msgwoft.item.*;
@@ -32,6 +32,7 @@ public class ModItems {
     public static Item CIRCUIT_BOARD;
 
     public static Item RAVEN_SPAWN_EGG;
+    public static Item MONSTER_JERKY;
 
     public static Item COPPER_HELMET;
     public static Item COPPER_CHESTPLATE;
@@ -65,6 +66,7 @@ public class ModItems {
 
         RAVEN_SPAWN_EGG = createItem("raven_spawn_egg", new ColourlessSpawnEggItem(ModEntities.RAVEN, new Item.Properties()));
 
+        MONSTER_JERKY = createItem("monster_jerky", new Item(new Item.Properties().food(Foods.COOKED_BEEF)));
         // Copper Age Backport
 
         COPPER_HELMET = createItem("copper_helmet", new ArmorItem(ModArmorMaterials.COPPER_ARMOR_MATERIAL, ArmorItem.Type.HELMET,

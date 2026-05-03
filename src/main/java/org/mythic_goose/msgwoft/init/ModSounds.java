@@ -12,6 +12,9 @@ public class ModSounds {
     public static final SoundEvent FB_RING1   = register("fb.ring1");
     public static final SoundEvent FB_RING2   = register("fb.ring2");
 
+
+    public static final SoundEvent RAVEN_CAW   = register("entity.raven.caw");
+
     private static SoundEvent register(String name) {
         ResourceLocation id = ResourceLocation.fromNamespaceAndPath("msgwoft", name);
         return Registry.register(BuiltInRegistries.SOUND_EVENT, id, SoundEvent.createVariableRangeEvent(id));

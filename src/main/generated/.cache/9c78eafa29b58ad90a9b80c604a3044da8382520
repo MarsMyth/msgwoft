@@ -1,7 +1,9 @@
-// 1.21.1	2026-04-30T19:34:56.6975015	Maybe Something Good Will Occur From This/Advancements
+// 1.21.1	2026-05-03T10:43:32.5380292	Maybe Something Good Will Occur From This/Advancements
 f8236dbf463c851a8e9ff91e92e0db6fb481a6d8 data\msgwoft\advancement\clear_skies\identification_station.json
 c4d487e22ca4aa32b890a112ca8699d3cbf0a1e2 data\msgwoft\advancement\clear_skies\chemistry_station.json
 10a7683a9286c9ecd2cb46ceed358dcf791bbc44 data\msgwoft\advancement\clear_skies\root.json
 4013d3f04d6074b4e5abeb60288cec160eafd97e data\msgwoft\advancement\clear_skies\identify.json
 b9ee15d38a99f5143a5362a1c70bbd28619bd640 data\msgwoft\advancement\clear_skies\recipe_gain.json
+2513d8a3ab1bddbb86feb1fe80b36529f4e4359d data\msgwoft\advancement\clear_skies\drying_rack.json
 e34e19b8c92f5edfc15d15c745e7e6a25949e60c data\msgwoft\advancement\clear_skies\specimen.json
+556cb57e79627a4f8a83c6f099520cb8b45b1d67 data\msgwoft\advancement\clear_skies\drying_jerky.json

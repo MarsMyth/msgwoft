@@ -13,6 +13,8 @@ public class MSGWOFTDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(LanguageProvider::new);
         pack.addProvider(RecipeGenerator::new);
         pack.addProvider(ItemTagProvider::new);
+        pack.addProvider(BlockTagProvider::new);
+        pack.addProvider(BlockLootTablesProvider::new);
         pack.addProvider(AdvancementGenerator::new);
 
 	}

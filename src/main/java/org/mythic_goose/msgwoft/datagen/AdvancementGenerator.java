@@ -116,5 +116,37 @@ public class AdvancementGenerator extends FabricAdvancementProvider {
                 // The first string used in criterion is the name referenced by other advancements when they want to have 'requirements'
                 .addCriterion("got_item", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.WRITTEN_RECIPE))
                 .save(consumer, "msgwoft:clear_skies/recipe_gain");
+
+        AdvancementHolder dryingAdvancement = Advancement.Builder.advancement()
+                .parent(rootAdvancement)
+                .display(
+                        ModBlocks.DRYING_RACK.asItem(), // The display icon
+                        Component.translatable("advancements.msgwoft.clear_skies.drying_rack.title"), // The title
+                        Component.translatable("advancements.msgwoft.clear_skies.drying_rack.desc"), // The description
+                        null,
+                        AdvancementType.GOAL, // Options: TASK, CHALLENGE, GOAL
+                        true, // Show toast top right
+                        true, // Announce to chat
+                        false // Hidden in the advancement tab
+                )
+                // The first string used in criterion is the name referenced by other advancements when they want to have 'requirements'
+                .addCriterion("got_item", InventoryChangeTrigger.TriggerInstance.hasItems(ModBlocks.DRYING_RACK.asItem()))
+                .save(consumer, "msgwoft:clear_skies/drying_rack");
+
+        AdvancementHolder dryingJerkyAdvancement = Advancement.Builder.advancement()
+                .parent(dryingAdvancement)
+                .display(
+                        ModItems.MONSTER_JERKY, // The display icon
+                        Component.translatable("advancements.msgwoft.clear_skies.drying_jerky.title"), // The title
+                        Component.translatable("advancements.msgwoft.clear_skies.drying_jerky.desc"), // The description
+                        null,
+                        AdvancementType.TASK, // Options: TASK, CHALLENGE, GOAL
+                        true, // Show toast top right
+                        true, // Announce to chat
+                        false // Hidden in the advancement tab
+                )
+                // The first string used in criterion is the name referenced by other advancements when they want to have 'requirements'
+                .addCriterion("got_item", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.MONSTER_JERKY))
+                .save(consumer, "msgwoft:clear_skies/drying_jerky");
     }
 }

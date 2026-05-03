@@ -1,13 +1,11 @@
 package org.mythic_goose.msgwoft.datagen;
 
-import io.netty.util.internal.shaded.org.jctools.queues.MpscArrayQueue;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricLanguageProvider;
 import net.minecraft.core.HolderLookup;
-import net.minecraft.network.chat.Component;
 import org.mythic_goose.msgwoft.init.ModBlocks;
 import org.mythic_goose.msgwoft.init.ModItems;
-import org.mythic_goose.msgwoft.init.ModMobEffects;
+import org.mythic_goose.msgwoft.init.ModSounds;
 
 import java.util.concurrent.CompletableFuture;
 
@@ -79,6 +77,8 @@ public class LanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.RAVEN_SPAWN_EGG, "Raven Spawn Egg");
         translationBuilder.add("entity.msgwoft.raven", "Raven");
 
+        translationBuilder.add(ModItems.MONSTER_JERKY, "Monster Jerky");
+        translationBuilder.add(ModBlocks.DRYING_RACK, "Drying Rack");
         // Advancements
 
         translationBuilder.add("advancements.msgwoft.clear_skies.root.title", "MSGWOFT: Clear Skies");
@@ -103,5 +103,13 @@ public class LanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("advancements.msgwoft.clear_skies.recipe.title", "Deep Dive");
         translationBuilder.add("advancements.msgwoft.clear_skies.recipe.desc",
                 "Found a Written Recipe Item");
+
+        translationBuilder.add("advancements.msgwoft.clear_skies.drying_rack.title", "Dryable");
+        translationBuilder.add("advancements.msgwoft.clear_skies.drying_rack.desc",
+                "Some things need to dry");
+
+        translationBuilder.add("advancements.msgwoft.clear_skies.drying_jerky.title", "Monster Jerky");
+        translationBuilder.add("advancements.msgwoft.clear_skies.drying_jerky.desc",
+                "Dry Rotten Flesh into Monster Jerky");
     }
 }

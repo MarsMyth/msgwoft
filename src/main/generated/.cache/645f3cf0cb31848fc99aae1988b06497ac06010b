@@ -1,4 +1,4 @@
-// 1.21.1	2026-04-30T19:34:56.6964966	Maybe Something Good Will Occur From This/Model Definitions
+// 1.21.1	2026-05-03T10:43:32.5370292	Maybe Something Good Will Occur From This/Model Definitions
 1208f77e68c4e753a605de4eeb1ea5aa08ce0384 assets\msgwoft\models\item\copper_helmet.json
 5c9a9e1da323d6b91e28fbd944131f504190bf5e assets\msgwoft\models\item\copper_leggings_diamond_trim.json
 403c472be31258358975a5597e739e521b1eac18 assets\msgwoft\models\item\copper_helmet_diamond_trim.json
@@ -44,8 +44,8 @@ e0a7ffdea05c79a7b7aebca4cc9f1bc10bd9b27d assets\msgwoft\models\item\copper_chest
 aeedf9fbfa02270a256b8a2f90f101b1e27c7c30 assets\msgwoft\models\item\copper_hoe.json
 32aa0f888cc9a23992ea53282438d1e8d0f9706d assets\msgwoft\models\item\copper_leggings_emerald_trim.json
 f4bc5f6144d91209852600be1ac5f731b07f02ff assets\msgwoft\models\item\copper_chestplate_lapis_trim.json
-884f97e495852ef4ff0956bbcab76f6448da7eef assets\msgwoft\models\item\copper_boots_iron_trim.json
 7991f71bc1e6a3a0940f246f4b0459f5b7eb032f assets\msgwoft\models\item\copper_chestplate_emerald_trim.json
+884f97e495852ef4ff0956bbcab76f6448da7eef assets\msgwoft\models\item\copper_boots_iron_trim.json
 578f74f906c075fbac383ffe76e8f5bbd914e0a7 assets\msgwoft\models\item\copper_shovel.json
 2577c7af2ba6fbcd79c1a407f74a48ba1a31b09f assets\msgwoft\models\item\copper_leggings_gold_trim.json
 f22290be595c96039caa01656b4dcd873209c91c assets\msgwoft\models\item\copper_leggings_redstone_trim.json
@@ -57,8 +57,9 @@ bc1d42735ace012626f052a73745487e5afcf52c assets\msgwoft\models\item\copper_helme
 ba1f6b391ddd0832d3b46f969b16dbaadcaf23f2 assets\msgwoft\models\item\copper_boots.json
 99cbb52eccdd3309c336ef454a3039ff447c89f5 assets\msgwoft\models\item\copper_boots_diamond_trim.json
 05a8c06b8fa32f58a56c71c9d9750caf1dc0c138 assets\msgwoft\models\item\copper_helmet_amethyst_trim.json
-f07449f4a732429d7b1e50937565b5fe4a47da50 assets\msgwoft\models\item\copper_boots_quartz_trim.json
+84f2548ac0605f678f3afd033cc50d6c5bb54dff assets\msgwoft\models\item\monster_jerky.json
 984859494ed1252f739ddb35500c3d23dc26c94c assets\msgwoft\models\item\synchronised_orb.json
+f07449f4a732429d7b1e50937565b5fe4a47da50 assets\msgwoft\models\item\copper_boots_quartz_trim.json
 37676a933ae138863c4d2c00bac0049a5dfeceb3 assets\msgwoft\models\item\ionised_void_shard.json
 8275e467c6c064f765b278fff8337a2482265c78 assets\msgwoft\models\item\copper_helmet_quartz_trim.json
 c0718208dbb0ae4da986bbf122d8c9050ff19083 assets\msgwoft\models\item\rock_scanner.json

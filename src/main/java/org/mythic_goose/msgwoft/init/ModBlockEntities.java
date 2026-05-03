@@ -2,13 +2,11 @@ package org.mythic_goose.msgwoft.init;
 
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
+import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import org.mythic_goose.msgwoft.MSGWOFT;
-import org.mythic_goose.msgwoft.block.entity.ChemistryStationBlockEntity;
-import org.mythic_goose.msgwoft.block.entity.DimensionalWarpgateBlockEntity;
-import org.mythic_goose.msgwoft.block.entity.IdentificationStationBlockEntity;
-import org.mythic_goose.msgwoft.block.entity.OverworldReturnGateBlockEntity;
+import org.mythic_goose.msgwoft.block.entity.*;
 
 public class ModBlockEntities {
 
@@ -32,7 +30,6 @@ public class ModBlockEntities {
                     ).build()
             );
 
-    // NEW
     public static final BlockEntityType<DimensionalWarpgateBlockEntity> DIMENSIONAL_WARPGATE_ENTITY =
             Registry.register(
                     BuiltInRegistries.BLOCK_ENTITY_TYPE,
@@ -52,6 +49,14 @@ public class ModBlockEntities {
                             ModBlocks.OVERWORLD_RETURN_GATE
                     ).build()
             );
+
+    public static final BlockEntityType<DryingRackBlockEntity> DRYING_RACK =
+            Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE,
+                    ResourceLocation.fromNamespaceAndPath(MSGWOFT.MOD_ID, "drying_rack"),
+                    BlockEntityType.Builder.of(
+                            DryingRackBlockEntity::new,
+                            ModBlocks.DRYING_RACK
+                    ).build());
 
     public static void register() {
         MSGWOFT.LOGGER.info("Registering Block Entities for " + MSGWOFT.MOD_ID);

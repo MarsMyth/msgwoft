@@ -18,5 +18,13 @@
     "sounds": [
       "msgwoft:fb/ring2"
     ]
+  },
+  "entity.raven.caw": {
+    "sounds": [
+      "msgwoft:raven/raven_1",
+      "msgwoft:raven/raven_2",
+      "msgwoft:raven/raven_3"
+    ],
+    "subtitle": "msgwoft.subtitles.entity.raven.caw"
   }
 }

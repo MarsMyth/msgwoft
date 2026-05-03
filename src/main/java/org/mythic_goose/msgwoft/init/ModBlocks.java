@@ -9,10 +9,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import org.mythic_goose.msgwoft.MSGWOFT;
-import org.mythic_goose.msgwoft.block.ChemistryStationBlock;
-import org.mythic_goose.msgwoft.block.IdentificationStationBlock;
-import org.mythic_goose.msgwoft.block.DimensionalWarpgateBlock;
-import org.mythic_goose.msgwoft.block.OverworldReturnGateBlock;
+import org.mythic_goose.msgwoft.block.*;
 
 public class ModBlocks {
 
@@ -26,6 +23,8 @@ public class ModBlocks {
             new DimensionalWarpgateBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.END_GATEWAY)));
     public static Block OVERWORLD_RETURN_GATE = createBlock("overworld_return_gate",
             new OverworldReturnGateBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.END_GATEWAY)));
+
+    public static Block DRYING_RACK = createBlock("drying_rack", new DryingRackBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
 
     private static Block createBlock(String name, Block block) {
         registerBlockItem(name, block);

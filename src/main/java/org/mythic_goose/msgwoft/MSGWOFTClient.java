@@ -18,6 +18,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.component.CustomData;
 import org.mythic_goose.msgwoft.block.entity.OverworldReturnGateBlockEntity;
 import org.mythic_goose.msgwoft.block.entity.renderer.DimensionalWarpgateBlockEntityRenderer;
+import org.mythic_goose.msgwoft.block.entity.renderer.DryingRackRenderer;
 import org.mythic_goose.msgwoft.block.entity.renderer.OverworldReturnGateBlockEntityRenderer;
 import org.mythic_goose.msgwoft.client.FlashbangClientHandler;
 import org.mythic_goose.msgwoft.client.TemporaryLightManager;
@@ -109,5 +110,7 @@ public class MSGWOFTClient implements ClientModInitializer {
                 ChemistryStationRecipeManager.loadFromPacket(pkt.recipes());
             });
         });
+
+        BlockEntityRenderers.register(ModBlockEntities.DRYING_RACK, DryingRackRenderer::new);
     }
 }

@@ -2,6 +2,7 @@ package org.mythic_goose.msgwoft.entity;
 
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.component.DataComponents;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
@@ -53,6 +54,7 @@ import org.jetbrains.annotations.Nullable;
 import org.mythic_goose.msgwoft.entity.goal.RavenDeliverBundleGoal;
 import org.mythic_goose.msgwoft.entity.goal.RavenFollowOwnerGoal;
 import org.mythic_goose.msgwoft.init.ModEntities;
+import org.mythic_goose.msgwoft.init.ModSounds;
 import software.bernie.geckolib.animatable.GeoAnimatable;
 import software.bernie.geckolib.animatable.instance.AnimatableInstanceCache;
 import software.bernie.geckolib.animation.*;
@@ -372,9 +374,10 @@ public class RavenEntity extends TamableAnimal implements GeoAnimatable {
                     switch (this.getRavenType()) {
                         // TODO: Replace with your actual particle types from your mod's registry
                         // e.g. ModParticles.RAVEN_FEATHER.get() etc.
-                        case DARK, THREE_EYED -> net.minecraft.core.particles.ParticleTypes.SMOKE;
-                        case ALBINO -> net.minecraft.core.particles.ParticleTypes.WHITE_SMOKE;
-                        case SEA_GREEN -> net.minecraft.core.particles.ParticleTypes.HAPPY_VILLAGER;
+                        case DARK, THREE_EYED -> ParticleTypes.SMOKE;
+                        case ALBINO -> ParticleTypes.WHITE_SMOKE;
+                        case SPAMPTOM -> ParticleTypes.DRIPPING_OBSIDIAN_TEAR;
+                        case SEA_GREEN -> ParticleTypes.HAPPY_VILLAGER;
                     },
                     this.getX(), this.getY() + 0.2 + randomHeight, this.getZ(),
                     0, 0, 0
@@ -411,15 +414,13 @@ public class RavenEntity extends TamableAnimal implements GeoAnimatable {
     @Nullable
     @Override
     protected SoundEvent getAmbientSound() {
-        // TODO: Replace with your actual sound: e.g. ModSounds.ENTITY_RAVEN_CAW.get()
-        return SoundEvents.PARROT_AMBIENT;
+        return ModSounds.RAVEN_CAW;
     }
 
     @Nullable
     @Override
     protected SoundEvent getHurtSound(DamageSource source) {
-        // TODO: Replace with your actual sound
-        return SoundEvents.PARROT_HURT;
+        return ModSounds.RAVEN_CAW;
     }
 
     // -------------------------------------------------------------------------
@@ -526,8 +527,9 @@ public class RavenEntity extends TamableAnimal implements GeoAnimatable {
     // -------------------------------------------------------------------------
 
     public enum Type {
-        DARK(55),
+        DARK(50),
         ALBINO(10),
+        SPAMPTOM(5),
         SEA_GREEN(35),
         THREE_EYED(0); // Name tag variant only
 

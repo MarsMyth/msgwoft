@@ -21,6 +21,7 @@ public class ItemDurabilityMixin {
             cancellable = true
     )
     private void onHurtAndBreak(int amount, ServerLevel level, ServerPlayer player, Consumer<Item> onBroken, CallbackInfo ci) {
+        if (player == null) return;
         for (ItemStack stack : player.getInventory().items) {
             if (stack.getItem() instanceof IonisedVoidShardItem) {
                 ci.cancel();

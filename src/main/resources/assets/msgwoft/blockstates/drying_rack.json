@@ -1,0 +1,12 @@
+{
+  "variants": {
+    "facing=south,has_item=false": { "model": "msgwoft:block/drying_rack", "y": 180 },
+    "facing=south,has_item=true":  { "model": "msgwoft:block/drying_rack", "y": 180 },
+    "facing=north,has_item=false": { "model": "msgwoft:block/drying_rack", "y": 0 },
+    "facing=north,has_item=true":  { "model": "msgwoft:block/drying_rack", "y": 0 },
+    "facing=east,has_item=false":  { "model": "msgwoft:block/drying_rack", "y": 90 },
+    "facing=east,has_item=true":   { "model": "msgwoft:block/drying_rack", "y": 90 },
+    "facing=west,has_item=false":  { "model": "msgwoft:block/drying_rack", "y": 270 },
+    "facing=west,has_item=true":   { "model": "msgwoft:block/drying_rack", "y": 270 }
+  }
+}
