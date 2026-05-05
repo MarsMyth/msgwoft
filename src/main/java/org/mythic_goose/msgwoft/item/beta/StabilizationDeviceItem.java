@@ -17,6 +17,6 @@ public class StabilizationDeviceItem extends Item {
     public void appendHoverText(ItemStack itemStack, TooltipContext tooltipContext, List<Component> list, TooltipFlag tooltipFlag) {
         list.add(Component.translatable("tooltip.beta_item"));
 
-        list.add(Component.literal("§7Right-click a Dimensional Rift to stabilize it"));
+        list.add(Component.literal("§7Right-click to repair all your items to full"));
     }
 }

@@ -22,7 +22,6 @@ public class ModelProvider extends FabricModelProvider {
     @Override
     public void generateItemModels(ItemModelGenerators itemModelGenerators) {
 
-        itemModelGenerators.generateFlatItem(ModItems.SYNCHRONISED_ORB, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.VOID_SHARD, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.ROCK_SCANNER, ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.DATA_SPECIMEN, ModelTemplates.FLAT_ITEM);

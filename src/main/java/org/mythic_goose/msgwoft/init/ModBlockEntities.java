@@ -30,25 +30,6 @@ public class ModBlockEntities {
                     ).build()
             );
 
-    public static final BlockEntityType<DimensionalWarpgateBlockEntity> DIMENSIONAL_WARPGATE_ENTITY =
-            Registry.register(
-                    BuiltInRegistries.BLOCK_ENTITY_TYPE,
-                    ResourceLocation.fromNamespaceAndPath(MSGWOFT.MOD_ID, "dimensional_warpgate"),
-                    BlockEntityType.Builder.of(
-                            DimensionalWarpgateBlockEntity::new,
-                            ModBlocks.DIMENSIONAL_WARPGATE
-                    ).build()
-            );
-
-    public static final BlockEntityType<OverworldReturnGateBlockEntity> OVERWORLD_RETURN_ENTITY =
-            Registry.register(
-                    BuiltInRegistries.BLOCK_ENTITY_TYPE,
-                    ResourceLocation.fromNamespaceAndPath(MSGWOFT.MOD_ID, "overworld_return_gate"),
-                    BlockEntityType.Builder.of(
-                            OverworldReturnGateBlockEntity::new,
-                            ModBlocks.OVERWORLD_RETURN_GATE
-                    ).build()
-            );
 
     public static final BlockEntityType<DryingRackBlockEntity> DRYING_RACK =
             Registry.register(BuiltInRegistries.BLOCK_ENTITY_TYPE,

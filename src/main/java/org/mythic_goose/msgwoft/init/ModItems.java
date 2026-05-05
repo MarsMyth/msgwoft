@@ -8,15 +8,13 @@ import net.minecraft.world.item.*;
 import org.mythic_goose.msgwoft.MSGWOFT;
 import org.mythic_goose.msgwoft.item.*;
 import org.mythic_goose.msgwoft.item.beta.StabilizationDeviceItem;
-import org.mythic_goose.msgwoft.item.SynchronisedOrbItem;
 import org.mythic_goose.msgwoft.item.materials.ModArmorMaterials;
 import org.mythic_goose.msgwoft.item.materials.ModTiers;
 
 public class ModItems {
     public static Item LUCK_MODULE;
     public static Item EFFICIENCY_MODULE;
-    
-    public static Item SYNCHRONISED_ORB;
+
     public static Item STABILIZATION_DEVICE;
 
     public static Item VOID_SHARD;
@@ -49,7 +47,6 @@ public class ModItems {
         LUCK_MODULE = createItem("luck_upgrade", new ModuleItem(new Item.Properties().stacksTo(10), "Luck"));
         EFFICIENCY_MODULE = createItem("efficiency_upgrade", new ModuleItem(new Item.Properties().stacksTo(10), "Efficiency"));
 
-        SYNCHRONISED_ORB = createItem("synchronised_orb", new SynchronisedOrbItem(new Item.Properties()));
         STABILIZATION_DEVICE = createItem("stabilization_device", new StabilizationDeviceItem(new Item.Properties().stacksTo(1)));
 
         VOID_SHARD = createItem("ionised_void_shard", new IonisedVoidShardItem(new Item.Properties()));

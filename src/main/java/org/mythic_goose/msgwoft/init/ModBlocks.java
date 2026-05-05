@@ -19,11 +19,6 @@ public class ModBlocks {
     public static Block CHEMISTRY_STATION = createBlock("chemistry_station",
             new ChemistryStationBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.POLISHED_TUFF).noOcclusion()));
 
-    public static Block DIMENSIONAL_WARPGATE = createBlock("dimensional_warpgate",
-            new DimensionalWarpgateBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.END_GATEWAY)));
-    public static Block OVERWORLD_RETURN_GATE = createBlock("overworld_return_gate",
-            new OverworldReturnGateBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.END_GATEWAY)));
-
     public static Block DRYING_RACK = createBlock("drying_rack", new DryingRackBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).noOcclusion()));
 
     private static Block createBlock(String name, Block block) {

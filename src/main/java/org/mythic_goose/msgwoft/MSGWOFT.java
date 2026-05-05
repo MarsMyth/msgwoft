@@ -2,21 +2,11 @@ package org.mythic_goose.msgwoft;
 
 import net.fabricmc.api.ModInitializer;
 
-import net.fabricmc.fabric.api.biome.v1.BiomeModifications;
-import net.fabricmc.fabric.api.biome.v1.BiomeSelectors;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.networking.v1.PayloadTypeRegistry;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayConnectionEvents;
 import net.fabricmc.fabric.api.networking.v1.ServerPlayNetworking;
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
-import net.minecraft.server.MinecraftServer;
-import net.minecraft.tags.BiomeTags;
-import net.minecraft.world.entity.MobCategory;
-import net.minecraft.world.entity.SpawnPlacementTypes;
-import net.minecraft.world.entity.SpawnPlacements;
-import net.minecraft.world.entity.animal.Animal;
-import net.minecraft.world.level.levelgen.Heightmap;
-import org.mythic_goose.msgwoft.client.render.ModShaders;
 import org.mythic_goose.msgwoft.entity.RavenEntity;
 import org.mythic_goose.msgwoft.init.*;
 import org.mythic_goose.msgwoft.network.ChemistryCraftPacket;
@@ -24,7 +14,6 @@ import org.mythic_goose.msgwoft.network.FlashbangPacket;
 import org.mythic_goose.msgwoft.network.SyncRecipesPacket;
 import org.mythic_goose.msgwoft.recipe.ChemistryStationRecipeManager;
 import org.mythic_goose.msgwoft.util.ModLootTableModifiers;
-import org.mythic_goose.msgwoft.world.gen.ModEntitySpawns;
 import org.mythic_goose.msgwoft.world.gen.ModWorldGeneration;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -47,7 +36,6 @@ public class MSGWOFT implements ModInitializer {
         ModEntities.register();
         ModBlockEntities.register();
         ModMenuTypes.init();
-        ModMobEffects.registerEffects();
 
         ServerLifecycleEvents.SERVER_STARTED.register(ChemistryStationRecipeManager::loadRecipes);
 

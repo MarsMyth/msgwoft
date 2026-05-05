@@ -1,6 +1,6 @@
 {
   "output": "msgwoft:ionised_void_shard",
-  "output_count": 2,
+  "output_count": 1,
   "ingredients": [
     { "color": "red",    "item": "minecraft:diamond" },
     { "color": "blue",  "item": "minecraft:quartz" },

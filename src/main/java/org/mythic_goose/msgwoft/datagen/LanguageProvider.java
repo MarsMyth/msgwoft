@@ -17,7 +17,6 @@ public class LanguageProvider extends FabricLanguageProvider {
     @Override
     public void generateTranslations(HolderLookup.Provider provider, TranslationBuilder translationBuilder) {
 
-        translationBuilder.add(ModItems.SYNCHRONISED_ORB, "Synchronised Orb");
         translationBuilder.add(ModItems.VOID_SHARD, "Ionised Void Shard");
 
         translationBuilder.add(ModItems.ROCK_SCANNER, "Rock Scanner");
@@ -35,7 +34,6 @@ public class LanguageProvider extends FabricLanguageProvider {
 
         translationBuilder.add("itemGroup.msgwoft", "MSGWOFT");
         translationBuilder.add("itemGroup.msgwoft.core", "Clear Skies");
-        translationBuilder.add("itemGroup.msgwoft.dimensional_vortex", "Dimensional Vortex");
         translationBuilder.add("itemGroup.msgwoft.copperbackport", "Copper Age Backport");
 
         translationBuilder.add("container.msgwoft.chemistry_station", "Chemistry Station");
@@ -67,12 +65,6 @@ public class LanguageProvider extends FabricLanguageProvider {
 
         translationBuilder.add(ModItems.STABILIZATION_DEVICE, "Stabilization Device");
         translationBuilder.add(ModItems.CIRCUIT_BOARD, "Circuit Board");
-
-        translationBuilder.add(ModBlocks.DIMENSIONAL_WARPGATE, "Dimensional Rift");
-        translationBuilder.add(ModBlocks.OVERWORLD_RETURN_GATE, "Dimensional Rift - (Return Gate)");
-
-        translationBuilder.add("effect.msgwoft.dimensional_desync", "Dimensional Desynchronisation");
-        translationBuilder.add("tooltip.sychronised_orb.use", "Prevents yourself from being dimensionally desynchronised");
 
         translationBuilder.add(ModItems.RAVEN_SPAWN_EGG, "Raven Spawn Egg");
         translationBuilder.add("entity.msgwoft.raven", "Raven");

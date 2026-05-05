@@ -16,13 +16,9 @@ import net.minecraft.core.component.DataComponents;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.component.CustomData;
-import org.mythic_goose.msgwoft.block.entity.OverworldReturnGateBlockEntity;
-import org.mythic_goose.msgwoft.block.entity.renderer.DimensionalWarpgateBlockEntityRenderer;
 import org.mythic_goose.msgwoft.block.entity.renderer.DryingRackRenderer;
-import org.mythic_goose.msgwoft.block.entity.renderer.OverworldReturnGateBlockEntityRenderer;
 import org.mythic_goose.msgwoft.client.FlashbangClientHandler;
 import org.mythic_goose.msgwoft.client.TemporaryLightManager;
-import org.mythic_goose.msgwoft.client.render.ModShaders;
 import org.mythic_goose.msgwoft.client.renderer.RavenRenderer;
 import org.mythic_goose.msgwoft.client.tooltip.RecipeTooltipComponent;
 import org.mythic_goose.msgwoft.client.tooltip.RecipeTooltipData;
@@ -35,7 +31,6 @@ import org.mythic_goose.msgwoft.screen.item.WrittenRecipeScreen;
 public class MSGWOFTClient implements ClientModInitializer {
     @Override
     public void onInitializeClient() {
-        ModShaders.register();
         ModScreens.init();
 
         // Color for item & design
@@ -95,15 +90,6 @@ public class MSGWOFTClient implements ClientModInitializer {
             }
             return null;
         });
-
-        BlockEntityRenderers.register(
-                ModBlockEntities.DIMENSIONAL_WARPGATE_ENTITY,
-                DimensionalWarpgateBlockEntityRenderer::new
-        );
-        BlockEntityRenderers.register(
-                ModBlockEntities.OVERWORLD_RETURN_ENTITY,
-                OverworldReturnGateBlockEntityRenderer::new
-        );
 
         ClientPlayNetworking.registerGlobalReceiver(SyncRecipesPacket.TYPE, (pkt, ctx) -> {
             ctx.client().execute(() -> {

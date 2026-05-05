@@ -33,15 +33,6 @@ public class ModSections {
                         )
                 ),
                 new SectionColored(
-                        "modules",
-                        Component.translatable("itemGroup.msgwoft.dimensional_vortex"),
-                        0xFF1a2e1a,
-                        0xFFFFFFFF,
-                        List.of(
-                                ModItems.SYNCHRONISED_ORB
-                        )
-                ),
-                new SectionColored(
                         "copperbackport",
                         Component.translatable("itemGroup.msgwoft.copperbackport"),
                         0xFFcc6600,
@@ -59,17 +50,6 @@ public class ModSections {
                                 ModItems.COPPER_PICKAXE,
                                 ModItems.COPPER_SHOVEL,
                                 ModItems.COPPER_HOE
-                        )
-                ),
-                SectionTextured.of(
-                        "msgwoft",
-                        "beta_tools",
-                        Component.literal("Beta Stage - Unfinished"),
-                        0xFFFFFFFF,
-                        List.of(
-                                ModItems.STABILIZATION_DEVICE,
-                                ModBlocks.DIMENSIONAL_WARPGATE.asItem(),
-                                ModBlocks.OVERWORLD_RETURN_GATE.asItem()
                         )
                 )
 //              Example of a textured section
