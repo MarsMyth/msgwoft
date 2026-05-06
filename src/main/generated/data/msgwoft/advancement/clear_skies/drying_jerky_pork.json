@@ -1,0 +1,34 @@
+{
+  "parent": "msgwoft:clear_skies/drying_rack",
+  "criteria": {
+    "got_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "msgwoft:jerky/pork_jerky"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.msgwoft.clear_skies.pork_jerky.desc"
+    },
+    "frame": "goal",
+    "icon": {
+      "count": 1,
+      "id": "msgwoft:jerky/pork_jerky"
+    },
+    "title": {
+      "translate": "advancements.msgwoft.clear_skies.pork_jerky.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

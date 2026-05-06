@@ -1,0 +1,164 @@
+{
+  "parent": "msgwoft:clear_skies/drying_rack",
+  "criteria": {
+    "got_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "msgwoft:jerky/salmon_jerky"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "got_item1": {
+      "conditions": {
+        "items": [
+          {
+            "items": "msgwoft:jerky/beef_jerky"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "got_item10": {
+      "conditions": {
+        "items": [
+          {
+            "items": "msgwoft:jerky/rabbit_jerky"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "got_item2": {
+      "conditions": {
+        "items": [
+          {
+            "items": "msgwoft:jerky/chicken_jerky"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "got_item3": {
+      "conditions": {
+        "items": [
+          {
+            "items": "msgwoft:jerky/clownfish_jerky"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "got_item4": {
+      "conditions": {
+        "items": [
+          {
+            "items": "msgwoft:jerky/fish_jerky"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "got_item5": {
+      "conditions": {
+        "items": [
+          {
+            "items": "msgwoft:jerky/monster_jerky"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "got_item6": {
+      "conditions": {
+        "items": [
+          {
+            "items": "msgwoft:jerky/salmon_jerky"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "got_item7": {
+      "conditions": {
+        "items": [
+          {
+            "items": "msgwoft:jerky/mutton_jerky"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "got_item8": {
+      "conditions": {
+        "items": [
+          {
+            "items": "msgwoft:jerky/pork_jerky"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "got_item9": {
+      "conditions": {
+        "items": [
+          {
+            "items": "msgwoft:jerky/pufferfish_jerky"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.msgwoft.clear_skies.all_jerky.desc"
+    },
+    "frame": "challenge",
+    "icon": {
+      "count": 1,
+      "id": "msgwoft:jerky/clownfish_jerky"
+    },
+    "title": {
+      "translate": "advancements.msgwoft.clear_skies.all_jerky.title"
+    }
+  },
+  "requirements": [
+    [
+      "got_item1"
+    ],
+    [
+      "got_item2"
+    ],
+    [
+      "got_item3"
+    ],
+    [
+      "got_item4"
+    ],
+    [
+      "got_item5"
+    ],
+    [
+      "got_item6"
+    ],
+    [
+      "got_item7"
+    ],
+    [
+      "got_item8"
+    ],
+    [
+      "got_item9"
+    ],
+    [
+      "got_item10"
+    ],
+    [
+      "got_item"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
