@@ -1,4 +1,4 @@
-package org.mythic_goose.msgwoft.item.beta;
+package org.mythic_goose.msgwoft.item;
 
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.InteractionHand;

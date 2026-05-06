@@ -16,7 +16,6 @@
     "description": {
       "translate": "advancements.msgwoft.clear_skies.drying_rack.desc"
     },
-    "frame": "goal",
     "icon": {
       "count": 1,
       "id": "msgwoft:drying_rack"

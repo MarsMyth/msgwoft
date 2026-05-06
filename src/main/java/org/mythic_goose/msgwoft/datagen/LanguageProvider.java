@@ -69,7 +69,16 @@ public class LanguageProvider extends FabricLanguageProvider {
         translationBuilder.add(ModItems.RAVEN_SPAWN_EGG, "Raven Spawn Egg");
         translationBuilder.add("entity.msgwoft.raven", "Raven");
 
+        translationBuilder.add(ModItems.BEEF_JERKY, "Beef Jerky");
+        translationBuilder.add(ModItems.CHICKEN_JERKY, "Chicken Jerky");
+        translationBuilder.add(ModItems.CLOWNFISH_JERKY, "Clownfish Jerky");
+        translationBuilder.add(ModItems.FISH_JERKY, "Cod Jerky");
         translationBuilder.add(ModItems.MONSTER_JERKY, "Monster Jerky");
+        translationBuilder.add(ModItems.MUTTON_JERKY, "Mutton Jerky");
+        translationBuilder.add(ModItems.PORK_JERKY, "Pork Jerky");
+        translationBuilder.add(ModItems.PUFFERFISH_JERKY, "Pufferfish Jerky");
+        translationBuilder.add(ModItems.RABBIT_JERKY, "Rabbit Jerky");
+        translationBuilder.add(ModItems.SALMON_JERKY, "Salmon Jerky");
         translationBuilder.add(ModBlocks.DRYING_RACK, "Drying Rack");
 
         translationBuilder.add("tooltip.repair_kit","§7Right-click to repair all your items to full");
@@ -102,8 +111,48 @@ public class LanguageProvider extends FabricLanguageProvider {
         translationBuilder.add("advancements.msgwoft.clear_skies.drying_rack.desc",
                 "Some things need to dry");
 
-        translationBuilder.add("advancements.msgwoft.clear_skies.drying_jerky.title", "Monster Jerky");
-        translationBuilder.add("advancements.msgwoft.clear_skies.drying_jerky.desc",
+        translationBuilder.add("advancements.msgwoft.clear_skies.beef_jerky.title", "Beef Jerky");
+        translationBuilder.add("advancements.msgwoft.clear_skies.beef_jerky.desc",
+                "Dry Raw Beef into Beef Jerky");
+
+        translationBuilder.add("advancements.msgwoft.clear_skies.chicken_jerky.title", "Chicken Jerky");
+        translationBuilder.add("advancements.msgwoft.clear_skies.chicken_jerky.desc",
+                "Dry Raw Chicken into Chicken Jerky");
+
+        translationBuilder.add("advancements.msgwoft.clear_skies.clownfish_jerky.title", "Clownfish Jerky");
+        translationBuilder.add("advancements.msgwoft.clear_skies.clownfish_jerky.desc",
+                "Dry Clownfish into Clownfish Jerky");
+
+        translationBuilder.add("advancements.msgwoft.clear_skies.fish_jerky.title", "Cod Jerky");
+        translationBuilder.add("advancements.msgwoft.clear_skies.fish_jerky.desc",
+                "Dry Raw Cod into Cod Jerky");
+
+        translationBuilder.add("advancements.msgwoft.clear_skies.zombie_jerky.title", "Monster Jerky");
+        translationBuilder.add("advancements.msgwoft.clear_skies.zombie_jerky.desc",
                 "Dry Rotten Flesh into Monster Jerky");
+
+        translationBuilder.add("advancements.msgwoft.clear_skies.mutton_jerky.title", "Mutton Jerky");
+        translationBuilder.add("advancements.msgwoft.clear_skies.mutton_jerky.desc",
+                "Dry Raw Mutton into Mutton Jerky");
+
+        translationBuilder.add("advancements.msgwoft.clear_skies.pork_jerky.title", "Pork Jerky");
+        translationBuilder.add("advancements.msgwoft.clear_skies.pork_jerky.desc",
+                "Dry Raw Pork into Pork Jerky");
+
+        translationBuilder.add("advancements.msgwoft.clear_skies.pufferfish_jerky.title", "Pufferfish Jerky");
+        translationBuilder.add("advancements.msgwoft.clear_skies.pufferfish_jerky.desc",
+                "Dry Pufferfish into Pufferfish Jerky");
+
+        translationBuilder.add("advancements.msgwoft.clear_skies.rabbit_jerky.title", "Rabbit Jerky");
+        translationBuilder.add("advancements.msgwoft.clear_skies.rabbit_jerky.desc",
+                "Dry Raw Rabbit into Rabbit Jerky");
+
+        translationBuilder.add("advancements.msgwoft.clear_skies.salmon_jerky.title", "Salmon Jerky");
+        translationBuilder.add("advancements.msgwoft.clear_skies.salmon_jerky.desc",
+                "Dry Raw Salmon into Salmon Jerky");
+
+        translationBuilder.add("advancements.msgwoft.clear_skies.all_jerky.title", "Got All The Jerky");
+        translationBuilder.add("advancements.msgwoft.clear_skies.all_jerky.desc",
+                "Get every jerky (They give the same food value)");
     }
 }

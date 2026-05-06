@@ -30,7 +30,16 @@ public class ModSections {
                                 ModItems.STABILIZATION_DEVICE,
                                 ModItems.RAVEN_SPAWN_EGG,
                                 ModBlocks.DRYING_RACK.asItem(),
-                                ModItems.MONSTER_JERKY
+                                ModItems.BEEF_JERKY,
+                                ModItems.CHICKEN_JERKY,
+                                ModItems.CLOWNFISH_JERKY,
+                                ModItems.FISH_JERKY,
+                                ModItems.MONSTER_JERKY,
+                                ModItems.MUTTON_JERKY,
+                                ModItems.PORK_JERKY,
+                                ModItems.PUFFERFISH_JERKY,
+                                ModItems.RABBIT_JERKY,
+                                ModItems.SALMON_JERKY
                         )
                 ),
                 new SectionColored(

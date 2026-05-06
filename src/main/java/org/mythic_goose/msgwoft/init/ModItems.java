@@ -7,7 +7,7 @@ import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.*;
 import org.mythic_goose.msgwoft.MSGWOFT;
 import org.mythic_goose.msgwoft.item.*;
-import org.mythic_goose.msgwoft.item.beta.StabilizationDeviceItem;
+import org.mythic_goose.msgwoft.item.StabilizationDeviceItem;
 import org.mythic_goose.msgwoft.item.materials.ModArmorMaterials;
 import org.mythic_goose.msgwoft.item.materials.ModTiers;
 
@@ -30,7 +30,17 @@ public class ModItems {
     public static Item CIRCUIT_BOARD;
 
     public static Item RAVEN_SPAWN_EGG;
+
+    public static Item BEEF_JERKY;
+    public static Item CHICKEN_JERKY;
+    public static Item CLOWNFISH_JERKY;
+    public static Item FISH_JERKY;
     public static Item MONSTER_JERKY;
+    public static Item MUTTON_JERKY;
+    public static Item PORK_JERKY;
+    public static Item PUFFERFISH_JERKY;
+    public static Item RABBIT_JERKY;
+    public static Item SALMON_JERKY;
 
     public static Item COPPER_HELMET;
     public static Item COPPER_CHESTPLATE;
@@ -63,7 +73,16 @@ public class ModItems {
 
         RAVEN_SPAWN_EGG = createItem("raven_spawn_egg", new ColourlessSpawnEggItem(ModEntities.RAVEN, new Item.Properties()));
 
-        MONSTER_JERKY = createItem("monster_jerky", new Item(new Item.Properties().food(Foods.COOKED_BEEF)));
+        BEEF_JERKY = createItem("jerky/beef_jerky", new Item(new Item.Properties().food(Foods.COOKED_BEEF)));
+        CHICKEN_JERKY = createItem("jerky/chicken_jerky", new Item(new Item.Properties().food(Foods.COOKED_BEEF)));
+        CLOWNFISH_JERKY = createItem("jerky/clownfish_jerky", new Item(new Item.Properties().food(Foods.COOKED_BEEF)));
+        FISH_JERKY = createItem("jerky/fish_jerky", new Item(new Item.Properties().food(Foods.COOKED_BEEF)));
+        MONSTER_JERKY = createItem("jerky/monster_jerky", new Item(new Item.Properties().food(Foods.COOKED_BEEF)));
+        MUTTON_JERKY = createItem("jerky/mutton_jerky", new Item(new Item.Properties().food(Foods.COOKED_BEEF)));
+        PORK_JERKY = createItem("jerky/pork_jerky", new Item(new Item.Properties().food(Foods.COOKED_BEEF)));
+        PUFFERFISH_JERKY = createItem("jerky/pufferfish_jerky", new Item(new Item.Properties().food(Foods.COOKED_BEEF)));
+        RABBIT_JERKY = createItem("jerky/rabbit_jerky", new Item(new Item.Properties().food(Foods.COOKED_BEEF)));
+        SALMON_JERKY = createItem("jerky/salmon_jerky", new Item(new Item.Properties().food(Foods.COOKED_BEEF)));
         // Copper Age Backport
 
         COPPER_HELMET = createItem("copper_helmet", new ArmorItem(ModArmorMaterials.COPPER_ARMOR_MATERIAL, ArmorItem.Type.HELMET,

@@ -47,6 +47,15 @@ public class ModelProvider extends FabricModelProvider {
         itemModelGenerators.generateFlatItem(ModItems.CIRCUIT_BOARD, ModelTemplates.FLAT_ITEM);
 
         itemModelGenerators.generateFlatItem(ModItems.RAVEN_SPAWN_EGG, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.BEEF_JERKY, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.CHICKEN_JERKY, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.CLOWNFISH_JERKY, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.FISH_JERKY, ModelTemplates.FLAT_ITEM);
         itemModelGenerators.generateFlatItem(ModItems.MONSTER_JERKY, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.MUTTON_JERKY, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.PORK_JERKY, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.PUFFERFISH_JERKY, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.RABBIT_JERKY, ModelTemplates.FLAT_ITEM);
+        itemModelGenerators.generateFlatItem(ModItems.SALMON_JERKY, ModelTemplates.FLAT_ITEM);
     }
 }

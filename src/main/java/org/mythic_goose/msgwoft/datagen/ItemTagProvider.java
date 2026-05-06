@@ -21,5 +21,18 @@ public class ItemTagProvider extends FabricTagProvider.ItemTagProvider {
                 .add(ModItems.COPPER_LEGGINGS)
                 .add(ModItems.COPPER_BOOTS)
         ;
+
+        getOrCreateTagBuilder(ItemTags.MEAT)
+                .add(ModItems.BEEF_JERKY)
+                .add(ModItems.CHICKEN_JERKY)
+                .add(ModItems.CLOWNFISH_JERKY)
+                .add(ModItems.FISH_JERKY)
+                .add(ModItems.MONSTER_JERKY)
+                .add(ModItems.MUTTON_JERKY)
+                .add(ModItems.PORK_JERKY)
+                .add(ModItems.PUFFERFISH_JERKY)
+                .add(ModItems.RABBIT_JERKY)
+                .add(ModItems.SALMON_JERKY)
+        ;
     }
 }

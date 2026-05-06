@@ -124,7 +124,7 @@ public class AdvancementGenerator extends FabricAdvancementProvider {
                         Component.translatable("advancements.msgwoft.clear_skies.drying_rack.title"), // The title
                         Component.translatable("advancements.msgwoft.clear_skies.drying_rack.desc"), // The description
                         null,
-                        AdvancementType.GOAL, // Options: TASK, CHALLENGE, GOAL
+                        AdvancementType.TASK, // Options: TASK, CHALLENGE, GOAL
                         true, // Show toast top right
                         true, // Announce to chat
                         false // Hidden in the advancement tab
@@ -137,16 +137,186 @@ public class AdvancementGenerator extends FabricAdvancementProvider {
                 .parent(dryingAdvancement)
                 .display(
                         ModItems.MONSTER_JERKY, // The display icon
-                        Component.translatable("advancements.msgwoft.clear_skies.drying_jerky.title"), // The title
-                        Component.translatable("advancements.msgwoft.clear_skies.drying_jerky.desc"), // The description
+                        Component.translatable("advancements.msgwoft.clear_skies.zombie_jerky.title"), // The title
+                        Component.translatable("advancements.msgwoft.clear_skies.zombie_jerky.desc"), // The description
                         null,
-                        AdvancementType.TASK, // Options: TASK, CHALLENGE, GOAL
+                        AdvancementType.GOAL, // Options: TASK, CHALLENGE, GOAL
                         true, // Show toast top right
                         true, // Announce to chat
                         false // Hidden in the advancement tab
                 )
                 // The first string used in criterion is the name referenced by other advancements when they want to have 'requirements'
                 .addCriterion("got_item", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.MONSTER_JERKY))
-                .save(consumer, "msgwoft:clear_skies/drying_jerky");
+                .save(consumer, "msgwoft:clear_skies/drying_jerky_monster");
+
+        AdvancementHolder dryingBeefAdvancement = Advancement.Builder.advancement()
+                .parent(dryingAdvancement)
+                .display(
+                        ModItems.BEEF_JERKY, // The display icon
+                        Component.translatable("advancements.msgwoft.clear_skies.beef_jerky.title"), // The title
+                        Component.translatable("advancements.msgwoft.clear_skies.beef_jerky.desc"), // The description
+                        null,
+                        AdvancementType.GOAL, // Options: TASK, CHALLENGE, GOAL
+                        true, // Show toast top right
+                        true, // Announce to chat
+                        false // Hidden in the advancement tab
+                )
+                // The first string used in criterion is the name referenced by other advancements when they want to have 'requirements'
+                .addCriterion("got_item", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.BEEF_JERKY))
+                .save(consumer, "msgwoft:clear_skies/drying_jerky_beef");
+
+        AdvancementHolder dryingChickenAdvancement = Advancement.Builder.advancement()
+                .parent(dryingAdvancement)
+                .display(
+                        ModItems.CHICKEN_JERKY, // The display icon
+                        Component.translatable("advancements.msgwoft.clear_skies.chicken_jerky.title"), // The title
+                        Component.translatable("advancements.msgwoft.clear_skies.chicken_jerky.desc"), // The description
+                        null,
+                        AdvancementType.GOAL, // Options: TASK, CHALLENGE, GOAL
+                        true, // Show toast top right
+                        true, // Announce to chat
+                        false // Hidden in the advancement tab
+                )
+                // The first string used in criterion is the name referenced by other advancements when they want to have 'requirements'
+                .addCriterion("got_item", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.CHICKEN_JERKY))
+                .save(consumer, "msgwoft:clear_skies/drying_jerky_chicken");
+
+        AdvancementHolder dryingClownfishAdvancement = Advancement.Builder.advancement()
+                .parent(dryingAdvancement)
+                .display(
+                        ModItems.CLOWNFISH_JERKY, // The display icon
+                        Component.translatable("advancements.msgwoft.clear_skies.clownfish_jerky.title"), // The title
+                        Component.translatable("advancements.msgwoft.clear_skies.clownfish_jerky.desc"), // The description
+                        null,
+                        AdvancementType.GOAL, // Options: TASK, CHALLENGE, GOAL
+                        true, // Show toast top right
+                        true, // Announce to chat
+                        false // Hidden in the advancement tab
+                )
+                // The first string used in criterion is the name referenced by other advancements when they want to have 'requirements'
+                .addCriterion("got_item", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.CLOWNFISH_JERKY))
+                .save(consumer, "msgwoft:clear_skies/drying_jerky_clownfish");
+
+        AdvancementHolder dryingFishAdvancement = Advancement.Builder.advancement()
+                .parent(dryingAdvancement)
+                .display(
+                        ModItems.FISH_JERKY, // The display icon
+                        Component.translatable("advancements.msgwoft.clear_skies.fish_jerky.title"), // The title
+                        Component.translatable("advancements.msgwoft.clear_skies.fish_jerky.desc"), // The description
+                        null,
+                        AdvancementType.GOAL, // Options: TASK, CHALLENGE, GOAL
+                        true, // Show toast top right
+                        true, // Announce to chat
+                        false // Hidden in the advancement tab
+                )
+                // The first string used in criterion is the name referenced by other advancements when they want to have 'requirements'
+                .addCriterion("got_item", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.FISH_JERKY))
+                .save(consumer, "msgwoft:clear_skies/drying_jerky_fish");
+
+        AdvancementHolder dryingMuttonAdvancement = Advancement.Builder.advancement()
+                .parent(dryingAdvancement)
+                .display(
+                        ModItems.MUTTON_JERKY, // The display icon
+                        Component.translatable("advancements.msgwoft.clear_skies.mutton_jerky.title"), // The title
+                        Component.translatable("advancements.msgwoft.clear_skies.mutton_jerky.desc"), // The description
+                        null,
+                        AdvancementType.GOAL, // Options: TASK, CHALLENGE, GOAL
+                        true, // Show toast top right
+                        true, // Announce to chat
+                        false // Hidden in the advancement tab
+                )
+                // The first string used in criterion is the name referenced by other advancements when they want to have 'requirements'
+                .addCriterion("got_item", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.MUTTON_JERKY))
+                .save(consumer, "msgwoft:clear_skies/drying_jerky_mutton");
+
+        AdvancementHolder dryingPorkAdvancement = Advancement.Builder.advancement()
+                .parent(dryingAdvancement)
+                .display(
+                        ModItems.PORK_JERKY, // The display icon
+                        Component.translatable("advancements.msgwoft.clear_skies.pork_jerky.title"), // The title
+                        Component.translatable("advancements.msgwoft.clear_skies.pork_jerky.desc"), // The description
+                        null,
+                        AdvancementType.GOAL, // Options: TASK, CHALLENGE, GOAL
+                        true, // Show toast top right
+                        true, // Announce to chat
+                        false // Hidden in the advancement tab
+                )
+                // The first string used in criterion is the name referenced by other advancements when they want to have 'requirements'
+                .addCriterion("got_item", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.PORK_JERKY))
+                .save(consumer, "msgwoft:clear_skies/drying_jerky_pork");
+
+        AdvancementHolder dryingPufferfishAdvancement = Advancement.Builder.advancement()
+                .parent(dryingAdvancement)
+                .display(
+                        ModItems.PUFFERFISH_JERKY, // The display icon
+                        Component.translatable("advancements.msgwoft.clear_skies.pufferfish_jerky.title"), // The title
+                        Component.translatable("advancements.msgwoft.clear_skies.pufferfish_jerky.desc"), // The description
+                        null,
+                        AdvancementType.GOAL, // Options: TASK, CHALLENGE, GOAL
+                        true, // Show toast top right
+                        true, // Announce to chat
+                        false // Hidden in the advancement tab
+                )
+                // The first string used in criterion is the name referenced by other advancements when they want to have 'requirements'
+                .addCriterion("got_item", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.PUFFERFISH_JERKY))
+                .save(consumer, "msgwoft:clear_skies/drying_jerky_pufferfish");
+
+        AdvancementHolder dryingRabbitAdvancement = Advancement.Builder.advancement()
+                .parent(dryingAdvancement)
+                .display(
+                        ModItems.RABBIT_JERKY, // The display icon
+                        Component.translatable("advancements.msgwoft.clear_skies.rabbit_jerky.title"), // The title
+                        Component.translatable("advancements.msgwoft.clear_skies.rabbit_jerky.desc"), // The description
+                        null,
+                        AdvancementType.GOAL, // Options: TASK, CHALLENGE, GOAL
+                        true, // Show toast top right
+                        true, // Announce to chat
+                        false // Hidden in the advancement tab
+                )
+                // The first string used in criterion is the name referenced by other advancements when they want to have 'requirements'
+                .addCriterion("got_item", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.RABBIT_JERKY))
+                .save(consumer, "msgwoft:clear_skies/drying_jerky_rabbit");
+
+        AdvancementHolder dryingSalmonAdvancement = Advancement.Builder.advancement()
+                .parent(dryingAdvancement)
+                .display(
+                        ModItems.SALMON_JERKY, // The display icon
+                        Component.translatable("advancements.msgwoft.clear_skies.salmon_jerky.title"), // The title
+                        Component.translatable("advancements.msgwoft.clear_skies.salmon_jerky.desc"), // The description
+                        null,
+                        AdvancementType.GOAL, // Options: TASK, CHALLENGE, GOAL
+                        true, // Show toast top right
+                        true, // Announce to chat
+                        false // Hidden in the advancement tab
+                )
+                // The first string used in criterion is the name referenced by other advancements when they want to have 'requirements'
+                .addCriterion("got_item", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.SALMON_JERKY))
+                .save(consumer, "msgwoft:clear_skies/drying_jerky_salmon");
+
+        AdvancementHolder dryingAllAdvancement = Advancement.Builder.advancement()
+                .parent(dryingAdvancement)
+                .display(
+                        ModItems.CLOWNFISH_JERKY, // The display icon
+                        Component.translatable("advancements.msgwoft.clear_skies.all_jerky.title"), // The title
+                        Component.translatable("advancements.msgwoft.clear_skies.all_jerky.desc"), // The description
+                        null,
+                        AdvancementType.CHALLENGE, // Options: TASK, CHALLENGE, GOAL
+                        true, // Show toast top right
+                        true, // Announce to chat
+                        false // Hidden in the advancement tab
+                )
+                // The first string used in criterion is the name referenced by other advancements when they want to have 'requirements'
+                .addCriterion("got_item1", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.BEEF_JERKY))
+                .addCriterion("got_item2", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.CHICKEN_JERKY))
+                .addCriterion("got_item3", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.CLOWNFISH_JERKY))
+                .addCriterion("got_item4", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.FISH_JERKY))
+                .addCriterion("got_item5", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.MONSTER_JERKY))
+                .addCriterion("got_item6", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.SALMON_JERKY))
+                .addCriterion("got_item7", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.MUTTON_JERKY))
+                .addCriterion("got_item8", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.PORK_JERKY))
+                .addCriterion("got_item9", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.PUFFERFISH_JERKY))
+                .addCriterion("got_item10", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.RABBIT_JERKY))
+                .addCriterion("got_item", InventoryChangeTrigger.TriggerInstance.hasItems(ModItems.SALMON_JERKY))
+                .save(consumer, "msgwoft:clear_skies/drying_jerky_all");
     }
 }
