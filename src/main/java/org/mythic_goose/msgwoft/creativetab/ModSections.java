@@ -27,6 +27,7 @@ public class ModSections {
                                 ModItems.VOID_SHARD,
                                 ModItems.FLASHBANG,
                                 ModItems.CIRCUIT_BOARD,
+                                ModItems.STABILIZATION_DEVICE,
                                 ModItems.RAVEN_SPAWN_EGG,
                                 ModBlocks.DRYING_RACK.asItem(),
                                 ModItems.MONSTER_JERKY

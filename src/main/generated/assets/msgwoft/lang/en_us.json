@@ -53,5 +53,6 @@
   "tooltip.module.when_in_chemistry": "§9When in Chemistry Station",
   "tooltip.module.when_in_identity": "§9When in Identification Station",
   "tooltip.no_recipe": "§d§o[Missing Recipe]",
-  "tooltip.preventing_durability": "§6This shard is preventing durability drain"
+  "tooltip.preventing_durability": "§6This shard is preventing durability drain",
+  "tooltip.repair_kit": "§7Right-click to repair all your items to full"
 }

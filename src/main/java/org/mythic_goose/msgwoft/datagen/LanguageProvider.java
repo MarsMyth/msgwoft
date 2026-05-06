@@ -71,6 +71,8 @@ public class LanguageProvider extends FabricLanguageProvider {
 
         translationBuilder.add(ModItems.MONSTER_JERKY, "Monster Jerky");
         translationBuilder.add(ModBlocks.DRYING_RACK, "Drying Rack");
+
+        translationBuilder.add("tooltip.repair_kit","§7Right-click to repair all your items to full");
         // Advancements
 
         translationBuilder.add("advancements.msgwoft.clear_skies.root.title", "MSGWOFT: Clear Skies");
